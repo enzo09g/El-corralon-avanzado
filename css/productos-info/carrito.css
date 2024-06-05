@@ -1,0 +1,57 @@
+.carrito-vacio:hover {
+    cursor: pointer;
+}
+
+
+.borrar-display {
+    display: block;
+}
+
+.borrar:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.logoWhatsapp {
+    position: fixed;
+    right: 15px;
+    bottom: 10px;
+}
+
+.imgwhatsapp {
+    max-width: 60px;
+}
+
+.carrito-menu {
+    font-size: 19px;
+    color: black;
+}
+
+.carrito-menu:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+.carrito-con-productos{
+    font-size: 21px;
+    color: red;
+}
+
+.carrito-modal-titulo {
+    padding: .625em;
+    text-align: center;
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.producto-modal{
+    display: flex;
+    justify-content: space-between;
+}
+
+.producto-modal-eliminar:hover{
+    cursor: pointer;
+    color: red;
+}

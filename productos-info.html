@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="css/productos-info/navbar-productInfo.css">
+    <link rel="stylesheet" href="css/productos-info/table.css">
+    <link rel="stylesheet" href="css/productos-info/media-queries.css">
+    <link rel="stylesheet" href="css/productos-info/carrito.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand">EL CORRALON</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#modalCarrito">
+                            <i class="bi bi-cart3 carrito-menu"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div id="contOpciones" class="row">
+            <div class="cont-titulo col-sm-12 col-lg-5">
+                <h1 class="display-5" id="titulo"></h1>
+            </div>
+
+            <div class="controladores row col-sm-12 col-md-12 col-lg-7">
+                <div class="controladores1 gx-0 col-sm-12 col-md-12 col-lg-6 row">
+
+                    <div class="c-c-1 p-1 col-sm-12 col-md-6 col-lg-6 d-flex align-items-center">
+                        <input class="c-buscador  form-control" id="buscador" type="text" placeholder="Buscar...">
+                    </div>
+                    <div class="c-c-2 p-1 col-sm-12 col-md-6 col-lg-6 d-flex align-items-center">
+                        <label for="selector">
+                            <select class="form-select" id="selector">
+                                <option value="" selected disabled>CATEGORIA</option>
+                                <option value="caños">Caños Estructurales</option>
+                                <option value="varillas">Varillas</option>
+                                <option value="chapas">Chapas</option>
+                                <option value="chapas lisas">Chapas Lisas</option>
+                                <option value="extractores">Extractores</option>
+                                <option value="perfil c">Perfil C</option>
+                            </select>
+                        </label>
+                    </div>
+
+                </div>
+                <div class="controladores2 gx-0 col-sm-12 col-md-12 col-lg-6 row">
+
+                    <div class="c-c-3 p-1 col-sm-12 col-md-6 col-lg-6 d-flex align-items-center">
+                        <label for="selector-filtro">
+                            <select class="form-select" id="selector-filtro">
+
+                            </select>
+                        </label>
+                    </div>
+                    <div class="c-c-4 p-1 col-sm-12 col-md-6 col-lg-6 d-flex align-items-center">
+                        <button class="btn btn-info" id="btn-quitar-filtro">Limpiar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="contenedor" id="contenedor">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Lista de Presupuestos</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoTabla">
+
+                </tbody>
+            </table>
+
+        </div>
+    </main>
+
+    <div class="logoWhatsapp d-none">
+        <a id="link" href="https://wa.me/59892731026" target="_blank">
+            <img class="imgwhatsapp" src="img/index/whatsapp-logo.webp" alt="">
+        </a>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalCarrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 bold">LISTA DE PRESUPUESTOS</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="lista-modal" class="modal-body">
+                    <div>
+                        <div class="carrito-modal-titulo row justify-content-around ">
+                            <div class="col-5">Nombre</div>
+                            <div class="col-5">Cantidad</div>
+                            <div class="col-2"></div>
+                        </div>
+                        <div id="contenedor-modal" class="row">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button id="wpButton" type="button" disabled class="btn btn-success">Pedir presupuesto <i
+                            class="bi bi-whatsapp"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+
+    <footer>
+
+    </footer>
+    <script src="js/productos-info.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js.map"></script>
+</body>
+
+</html>
