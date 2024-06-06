@@ -1,0 +1,4 @@
+soluciones: Darle tamaño fijo a cada uno. 
+Acordarse que hay un justify content around
+h-25 en el div del titulo
+y Div aparte en los datos
