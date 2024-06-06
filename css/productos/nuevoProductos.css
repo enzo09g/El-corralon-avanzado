@@ -1,0 +1,14 @@
+.img-thumbnail:hover {
+    transform: scale(1.03);
+}
+
+.img-thumbnail {
+    max-width: 100%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.shadow {
+     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
