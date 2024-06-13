@@ -1,0 +1,44 @@
+{
+    "titulo": "Chapa labrada",
+    "objeto": [
+        {
+            "codigo": "6263",
+            "nombre": "CHAPA LABRADA 1.50 X 3 MTS. 2.00MM",
+            "codificacion": "Familia",
+            "clasificacion": "CHAPA LABRADA",
+            "listaPrecio": "CONTADO UYU",
+            "moneda": "UYU",
+            "precioUnitario": "0.00",
+            "unidad": "UNID",
+            "precioEditable": "NO",
+            "activo": "SI",
+            "publicado": "SI"
+        },
+        {
+            "codigo": "6558",
+            "nombre": "CHAPA LABRADA 1.50 X 5.80 X 2.50MM",
+            "codificacion": "Familia",
+            "clasificacion": "CHAPA LABRADA",
+            "listaPrecio": "CONTADO UYU",
+            "moneda": "UYU",
+            "precioUnitario": "0.00",
+            "unidad": "UNID",
+            "precioEditable": "NO",
+            "activo": "SI",
+            "publicado": "SI"
+        },
+        {
+            "codigo": "6559",
+            "nombre": "CHAPA LABRADA 1.50 X 5.80 X 3.00MM",
+            "codificacion": "Familia",
+            "clasificacion": "CHAPA LABRADA",
+            "listaPrecio": "CONTADO UYU",
+            "moneda": "UYU",
+            "precioUnitario": "0.00",
+            "unidad": "UNID",
+            "precioEditable": "NO",
+            "activo": "SI",
+            "publicado": "SI"
+        }
+    ]
+}
