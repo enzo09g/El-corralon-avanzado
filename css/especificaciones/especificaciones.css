@@ -1,0 +1,20 @@
+.titulo{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.spanModelo {
+    font-size: 30px;
+}
+.medida{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 19px;
+}
+
+.borde-datos{
+    border-right: solid #DEE2E6 1px;
+    font-size: larger;
+}
+
+.datos{
+    font-size: larger;
+}
