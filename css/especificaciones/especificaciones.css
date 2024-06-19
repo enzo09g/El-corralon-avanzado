@@ -1,20 +1,35 @@
-.titulo{
+.titulo {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 .spanModelo {
     font-size: 30px;
 }
-.medida{
+
+.medida {
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 19px;
 }
 
-.borde-datos{
+.borde-datos {
     border-right: solid #DEE2E6 1px;
     font-size: larger;
 }
 
-.datos{
+.datos {
     font-size: larger;
+}
+
+.texto-vertical {
+    writing-mode: vertical-rl;
+    /* RL significa Right to Left, para texto vertical de derecha a izquierda */
+    text-orientation: upright;
+    /* Orientación vertical */
+    white-space: nowrap;
+    /* Para evitar que el texto se ajuste automáticamente */
+}
+
+.recuadro{
+    border: 3px solid blue;
 }
