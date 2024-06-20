@@ -1,3 +1,15 @@
+body{
+    font-family: 'open sans';
+}
+
+nav{
+    font-family: "Work Sans", sans-serif !important;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
 .titulo {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -21,7 +33,23 @@
     font-size: larger;
 }
 
+.fontWork {
+
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: #242422;
+
+}
+
 .texto-vertical {
+
+    background-color: rgb(192, 40, 40);
+
     writing-mode: vertical-rl;
     /* RL significa Right to Left, para texto vertical de derecha a izquierda */
     text-orientation: upright;
@@ -30,6 +58,64 @@
     /* Para evitar que el texto se ajuste automáticamente */
 }
 
-.recuadro{
-    border: 3px solid blue;
+
+.texto-vertical2 {
+    background-color: rgb(192, 40, 40);
+
+    writing-mode: vertical-rl;
+    /* RL significa Right to Left, para texto vertical de derecha a izquierda */
+    text-orientation: upright;
+    /* Orientación vertical */
+    white-space: nowrap;
+    /* Para evitar que el texto se ajuste automáticamente */
 }
+
+.recuadro {
+    border: 3px solid red;
+    border-radius: 5px;
+}
+
+.listaSinEstilo{
+    list-style-type: none;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+.listaSinEstilo li{
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    line-height: 80px;
+}
+
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    /* Estilos para dispositivos extra pequeños */
+  }
+  
+  /* Small devices (phones, 576px and up) */
+  @media (min-width: 576px) {
+    /* Estilos para dispositivos pequeños */
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    /* Estilos para dispositivos medianos */
+  }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    /* Estilos para dispositivos grandes */
+  }
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    /* Estilos para dispositivos extra grandes */
+  }
+  
+  /* Extra extra large devices (larger desktops, 1400px and up) */
+  @media (min-width: 1400px) {
+    /* Estilos para dispositivos extra extra grandes */
+  }
+  
