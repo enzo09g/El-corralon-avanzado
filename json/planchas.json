@@ -1,0 +1,122 @@
+{
+    "titulo": "Planchas",
+    "objeto": [
+        {
+            "codigo": "6802",
+            "nombre": "PLANCHA C 1\/8 1.5X3.0 MTS",
+            "codificacion": "Familia",
+            "clasificacion": "PLANCHA",
+            "listaPrecio": "CONTADO UYU",
+            "moneda": "UYU",
+            "precioUnitario": "7,485.92",
+            "unidad": "UNID",
+            "precioEditable": "NO",
+            "activo": "SI",
+            "publicado": "SI"
+        },
+        {
+            "codigo": "6806",
+            "nombre": "PLANCHA G 5\/32 1.5X3.0 MTS",
+            "codificacion": "Familia",
+            "clasificacion": "PLANCHA",
+            "listaPrecio": "CONTADO UYU",
+            "moneda": "UYU",
+            "precioUnitario": "9,354.86",
+            "unidad": "UNID",
+            "precioEditable": "NO",
+            "activo": "SI",
+            "publicado": "SI"
+        },
+        {
+            "codigo": "6810",
+            "nombre": "PLANCHA K 3\/16 1.5X3.0 MTS",
+            "codificacion": "Familia",
+            "clasificacion": "PLANCHA",
+            "listaPrecio": "CONTADO UYU",
+            "moneda": "UYU",
+            "precioUnitario": "11,633.63",
+            "unidad": "UNID",
+            "precioEditable": "NO",
+            "activo": "SI",
+            "publicado": "SI"
+        },
+        {
+            "codigo": "6814",
+            "nombre": "PLANCHA O 1\/4 1.5X3.0 MTS",
+            "codificacion": "Familia",
+            "clasificacion": "PLANCHA",
+            "listaPrecio": "CONTADO UYU",
+            "moneda": "UYU",
+            "precioUnitario": "15,828.28",
+            "unidad": "UNID",
+            "precioEditable": "NO",
+            "activo": "SI",
+            "publicado": "SI"
+        },
+        {
+            "codigo": "6818",
+            "nombre": "PLANCHA S 5\/16 1.5X3.0 MTS",
+            "codificacion": "Familia",
+            "clasificacion": "PLANCHA",
+            "listaPrecio": "CONTADO UYU",
+            "moneda": "UYU",
+            "precioUnitario": "19,905.57",
+            "unidad": "UNID",
+            "precioEditable": "NO",
+            "activo": "SI",
+            "publicado": "SI"
+        },
+        {
+            "codigo": "6822",
+            "nombre": "PLANCHA W 3\/8 1.5X3.0 MTS",
+            "codificacion": "Familia",
+            "clasificacion": "PLANCHA",
+            "listaPrecio": "CONTADO UYU",
+            "moneda": "UYU",
+            "precioUnitario": "23,633.94",
+            "unidad": "UNID",
+            "precioEditable": "NO",
+            "activo": "SI",
+            "publicado": "SI"
+        },
+        {
+            "codigo": "6826",
+            "nombre": "PLANCHA ZA 1\/2 1.5X3.0 MTS",
+            "codificacion": "Familia",
+            "clasificacion": "PLANCHA",
+            "listaPrecio": "CONTADO UYU",
+            "moneda": "UYU",
+            "precioUnitario": "31,124.93",
+            "unidad": "UNID",
+            "precioEditable": "NO",
+            "activo": "SI",
+            "publicado": "SI"
+        },
+        {
+            "codigo": "6830",
+            "nombre": "PLANCHA ZE 5\/8 1.5X3.0 MTS",
+            "codificacion": "Familia",
+            "clasificacion": "PLANCHA",
+            "listaPrecio": "CONTADO UYU",
+            "moneda": "UYU",
+            "precioUnitario": "42,445.17",
+            "unidad": "UNID",
+            "precioEditable": "NO",
+            "activo": "SI",
+            "publicado": "SI"
+        },
+        {
+            "codigo": "6834",
+            "nombre": "PLANCHA ZI 3\/4 1.5X3.0 MTS",
+            "codificacion": "Familia",
+            "clasificacion": "PLANCHA",
+            "listaPrecio": "CONTADO UYU",
+            "moneda": "UYU",
+            "precioUnitario": "50,529.96",
+            "unidad": "UNID",
+            "precioEditable": "NO",
+            "activo": "SI",
+            "publicado": "SI"
+        }
+    ]
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="./css/productos/nuevoProductos.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg mavbar-brand navbar-dark bg-dark">
+        <div class="container px-5">
+            <a class="navbar-brand" href="#!">
+                <img src="img/logo.jpg" alt="" height="37" width="160">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item nav-underline"><a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item nav-underline px-3"><a class="nav-link active" aria-current="page"
+                            href="nuevoProductos.html">Productos</a>
+                    </li>
+                    <li class="nav-item nav-underline pe-3"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                    <li class="nav-item nav-underline"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row col-11 justify-content-center align-content-center m-0">
+
+            <div class="row mt-5">
+                <div class="list-group" id="cat-list-container">
+                    <div onclick="trasladarse(event)" class="shadow list-group-item list-group-item-action cursor-active" data-catNombre="chapas" data-url="productos-info.html">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-sm-12 col-md-3">
+                                <img src="./img/productos/chapas.jpeg" alt="${category.description}"
+                                    class="img-thumbnail">
+                            </div>
+                            <div class="row col-sm-12 col-md-7 text-sm-center text-md-start">
+                                <p class="fs-2 f-releway">Chapas</p>
+                                <p class="fs-5 f-releway">${category.description}</p>
+                            </div>
+                            <div
+                                class="col-sm-12 col-md-2 text-center d-flex justify-content-center align-items-center">
+                                <p class="text-muted">${category.productCount} artículos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="list-group" id="cat-list-container">
+                    <div onclick="trasladarse(event)" data-catNombre="perfil c" class="shadow list-group-item list-group-item-action cursor-active">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-sm-12 col-md-3">
+                                <img src="./img/productos/perfil c.jpeg" alt="${category.description}"
+                                    class="img-thumbnail">
+                            </div>
+                            <div class="row col-sm-12 col-md-7 text-sm-center text-md-start">
+                                <p class="fs-2 f-releway">Perfil C Galvanizado</p>
+                                <p class="fs-5 f-releway">${category.description}</p>
+                            </div>
+                            <div
+                                class="col-sm-12 col-md-2 text-center d-flex justify-content-center align-items-center">
+                                <p class="text-muted">${category.productCount} artículos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="list-group" id="cat-list-container">
+                    <div onclick="trasladarse(event)" data-catNombre="accesorios para chapas" class="shadow list-group-item list-group-item-action cursor-active">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-sm-12 col-md-3">
+                                <img src="./img/productos/accesorios para chapas.jpeg" alt="${category.description}"
+                                    class="img-thumbnail">
+                            </div>
+                            <div class="row col-sm-12 col-md-7 text-sm-center text-md-start">
+                                <p class="fs-2 f-releway">Accesorios para chapas</p>
+                                <p class="fs-5 f-releway">${category.description}</p>
+                            </div>
+                            <div
+                                class="col-sm-12 col-md-2 text-center d-flex justify-content-center align-items-center">
+                                <p class="text-muted">${category.productCount} artículos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="list-group" id="cat-list-container">
+                    <div onclick="trasladarse(event)" data-catNombre="planchas" class="shadow list-group-item list-group-item-action cursor-active">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-sm-12 col-md-3">
+                                <img src="./img/productos/planchas.jpeg" alt="${category.description}"
+                                    class="img-thumbnail">
+                            </div>
+                            <div class="row col-sm-12 col-md-7 text-sm-center text-md-start">
+                                <p class="fs-2 f-releway">Planchas</p>
+                                <p class="fs-5 f-releway">${category.description}</p>
+                            </div>
+                            <div
+                                class="col-sm-12 col-md-2 text-center d-flex justify-content-center align-items-center">
+                                <p class="text-muted">${category.productCount} artículos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="list-group" id="cat-list-container">
+                    <div onclick="trasladarse(event)" data-catNombre="chapas lisas" class="shadow list-group-item list-group-item-action cursor-active">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-sm-12 col-md-3">
+                                <img src="./img/productos/chapas lisas.jpeg" alt="${category.description}"
+                                    class="img-thumbnail">
+                            </div>
+                            <div class="row col-sm-12 col-md-7 text-sm-center text-md-start">
+                                <p class="fs-2 f-releway">Chapas lisas</p>
+                                <p class="fs-5 f-releway">${category.description}</p>
+                            </div>
+                            <div
+                                class="col-sm-12 col-md-2 text-center d-flex justify-content-center align-items-center">
+                                <p class="text-muted">${category.productCount} artículos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="list-group" id="cat-list-container">
+                    <div onclick="trasladarse(event)" data-catNombre="extractores" class="shadow list-group-item list-group-item-action cursor-active">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-sm-12 col-md-3">
+                                <img src="./img/productos/extractores.jpeg" alt="${category.description}"
+                                    class="img-thumbnail">
+                            </div>
+                            <div class="row col-sm-12 col-md-7 text-sm-center text-md-start">
+                                <p class="fs-2 f-releway">Extractores</p>
+                                <p class="fs-5 f-releway">${category.description}</p>
+                            </div>
+                            <div
+                                class="col-sm-12 col-md-2 text-center d-flex justify-content-center align-items-center">
+                                <p class="text-muted">${category.productCount} artículos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="list-group" id="cat-list-container">
+                    <div onclick="trasladarse(event)" data-catNombre="caños" class="shadow list-group-item list-group-item-action cursor-active">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-sm-12 col-md-3">
+                                <img src="./img/productos/caños.jpeg" alt="${category.description}"
+                                    class="img-thumbnail">
+                            </div>
+                            <div class="row col-sm-12 col-md-7 text-sm-center text-md-start">
+                                <p class="fs-2 f-releway">Caños</p>
+                                <p class="fs-5 f-releway">${category.description}</p>
+                            </div>
+                            <div
+                                class="col-sm-12 col-md-2 text-center d-flex justify-content-center align-items-center">
+                                <p class="text-muted">${category.productCount} artículos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="list-group" id="cat-list-container">
+                    <div onclick="trasladarse(event)" data-catNombre="varillas" class="shadow list-group-item list-group-item-action cursor-active">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-sm-12 col-md-3">
+                                <img src="./img/productos/varillas.jpeg" alt="${category.description}"
+                                    class="img-thumbnail">
+                            </div>
+                            <div class="row col-sm-12 col-md-7 text-sm-center text-md-start">
+                                <p class="fs-2 f-releway">Varillas</p>
+                                <p class="fs-5 f-releway">${category.description}</p>
+                            </div>
+                            <div
+                                class="col-sm-12 col-md-2 text-center d-flex justify-content-center align-items-center">
+                                <p class="text-muted">${category.productCount} artículos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="list-group" id="cat-list-container">
+                    <div onclick="trasladarse(event)" data-catNombre="chapa labrada" class="shadow list-group-item list-group-item-action cursor-active">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-sm-12 col-md-3">
+                                <img src="./img/productos/Chapa labrada.jpeg" alt="${category.description}"
+                                    class="img-thumbnail">
+                            </div>
+                            <div class="row col-sm-12 col-md-7 text-sm-center text-md-start">
+                                <p class="fs-2 f-releway">Chapa labrada</p>
+                                <p class="fs-5 f-releway">${category.description}</p>
+                            </div>
+                            <div
+                                class="col-sm-12 col-md-2 text-center d-flex justify-content-center align-items-center">
+                                <p class="text-muted">${category.productCount} artículos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="list-group" id="cat-list-container">
+                    <div onclick="trasladarse(event)" data-catNombre="cielo raso" class="shadow list-group-item list-group-item-action cursor-active">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-sm-12 col-md-3">
+                                <img src="./img/productos/Cielo raso.jpeg" alt="${category.description}"
+                                    class="img-thumbnail">
+                            </div>
+                            <div class="row col-sm-12 col-md-7 text-sm-center text-md-start">
+                                <p class="fs-2 f-releway">Cielo raso</p>
+                                <p class="fs-5 f-releway">${category.description}</p>
+                            </div>
+                            <div
+                                class="col-sm-12 col-md-2 text-center d-flex justify-content-center align-items-center">
+                                <p class="text-muted">${category.productCount} artículos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <script src="./js/nuevoProductos-tarjetas.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js.map"></script>
+</body>
+
+</html>
