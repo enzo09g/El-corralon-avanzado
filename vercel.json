@@ -5,8 +5,25 @@
         "destination": "/especificaciones.html"
       },
       {
-        "source": "/contact",
-        "destination": "/contact.html"
+        "source": "/catalogo",
+        "destination": "/catalogo.html"
+      },
+      {
+        "source": "/contacto",
+        "destination": "/contacto.html"
+      },  {
+        "source": "/productos",
+        "destination": "/nuevoProductos.html"
+      },  {
+        "source": "/productos-info",
+        "destination": "/productos-info.html"
+      },  {
+        "source": "/inicio",
+        "destination": "/index.html"
+      },  {
+        "source": "/index",
+        "destination": "/index.html"
       }
+
     ]
   }
