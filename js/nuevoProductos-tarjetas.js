@@ -7,5 +7,5 @@ function trasladarse(event){
     console.log(dataValue)
     localStorage.setItem('catNombre', dataNombre)
     localStorage.setItem('tipoNombre', dataValue);
-    window.location = "productos-info.html";
+    window.location = "productos-info";
   }
