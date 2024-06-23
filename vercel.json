@@ -1,29 +1,64 @@
 {
     "rewrites": [
-      {
-        "source": "/Especificaciones",
-        "destination": "/especificaciones.html"
-      },
-      {
-        "source": "/Catálogo",
-        "destination": "/Catalogo.html"
-      },
-      {
-        "source": "/contacto",
-        "destination": "/contacto.html"
-      },  {
-        "source": "/productos",
-        "destination": "/nuevoProductos.html"
-      },  {
-        "source": "/productos-info",
-        "destination": "/productos-info.html"
-      },  {
-        "source": "/inicio",
-        "destination": "/index.html"
-      },  {
-        "source": "/index",
-        "destination": "/index.html"
-      }
-
+        {
+            "source": "/especificaciones",
+            "destination": "/especificaciones.html"
+        },
+        {
+            "source": "/Especificaciones",
+            "destination": "/especificaciones.html"
+        },
+        {
+            "source": "/Catálogo",
+            "destination": "/catalogo.html"
+        },
+        {
+            "source": "/catálogo",
+            "destination": "/catalogo.html"
+        },
+        {
+            "source": "/Catalogo",
+            "destination": "/catalogo.html"
+        },
+        {
+            "source": "/catalogo",
+            "destination": "/catalogo.html"
+        },
+        {
+            "source": "/contacto",
+            "destination": "/contacto.html"
+        },
+        {
+            "source": "/Contacto",
+            "destination": "/contacto.html"
+        },
+        {
+            "source": "/productos",
+            "destination": "/nuevoProductos.html"
+        },
+        {
+            "source": "/Productos",
+            "destination": "/nuevoProductos.html"
+        },
+        {
+            "source": "/productos-info",
+            "destination": "/productos-info.html"
+        },
+        {
+            "source": "/Productos-info",
+            "destination": "/productos-info.html"
+        },
+        {
+            "source": "/inicio",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/Inicio",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/index",
+            "destination": "/index.html"
+        }
     ]
-  }
+}
