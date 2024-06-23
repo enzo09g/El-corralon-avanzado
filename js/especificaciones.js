@@ -1,6 +1,7 @@
 const paginas = [
     {
         titulo: "EXTRACTORES",
+        frase: "Funcionan con la fuerza del viento, mejorando las condiciones del aire interno de su local o edificacion.",
         LDKey: "extractores",
         codigo: `        
         <h1 class="m-3 text-capitalize titulo">CARACTERISTICAS</h1>
@@ -90,6 +91,164 @@ const paginas = [
 
         </div>`
     },
+    {
+        titulo: "CHAPA TITAN",
+        frase: "",
+        LDKey: "chapa titan",
+        codigo: `
+        <div class="contenedor-principal">
+
+        <div class="contenedor-listas">
+            <div class="contenedor-titulo">
+                <h2 class="">INFORMACIÓN GENERAL</h2>
+            </div>
+            <div class="contenedor-info">
+                <div class="contenedor-lista-roja">
+                    <h3 class="titulo-lista">Uso</h3>
+                    <ul>
+                        <li>Hogares</li>
+                        <li>Galpones</li>
+                        <li>Tinglados</li>
+                        <li>Garages</li>
+                        <li>Cerramientos laterales</li>
+                    </ul>
+                </div>
+                <div class="contenedor-lista-blanca">
+                    <h3 class="titulo-lista">Espesores (mm)</h3>
+                    <ul>
+                        <li>1,5</li>
+                        <li>1,6</li>
+                        <li>2,0</li>
+                        <li>2,5</li>
+                    </ul>
+                </div>
+                <div class="contenedor-lista-roja">
+                    <h3 class="titulo-lista">Terminación</h3>
+                    <p>Negro Galvanizado</p>
+                </div>
+                <div class="contenedor-lista-accesorios">
+                    <h3 class="titulo-lista">Accesorios</h3>
+                    <ul>
+                        <li>Fabricamos conectores que permiten encastrar los perfiles entre sí.</li>
+                        <li>Bulonería importada: tornillos autorroscantes con arandela de neopreno vulcanizado
+                            para evitar goteras.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="contenedor-principal-tabla">
+            <div class="contenedor-titulo-tabla">
+                <h2>TABLA DE MEDIDAS</h2>
+            </div>
+            <div class="contenedor-tabla">
+                <table class="text-center">
+                    <thead>
+                        <tr>
+                            <th>Alto (mm)</th>
+                            <th>Ancho (mm)</th>
+                            <th>Ala (mm)</th>
+                            <th>Terminación</th>
+                            <th>Espesor (mm)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-zinc">
+                            <td rowspan="3">100</td>
+                            <td rowspan="3">45</td>
+                            <td rowspan="3">15</td>
+                            <td>Negro</td>
+                            <td>1.5</td>
+                        </tr>
+                        <tr class="bg-zinc">
+                            <td>Galvanizado</td>
+                            <td rowspan="2">2</td>
+                        </tr>
+                        <tr class="bg-zinc">
+                            <td>Negro</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">120</td>
+                            <td rowspan="2">50</td>
+                            <td rowspan="2">15</td>
+                            <td>Galvanizado</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Negro</td>
+                            <td rowspan="2">2</td>
+
+                        </tr>
+                        <tr>
+                            <td>65</td>
+                            <td>18</td>
+                            <td>Galvanizado</td>
+                        </tr>
+                        <tr class="bg-zinc">
+                            <td rowspan="3">140</td>
+                            <td rowspan="3">55</td>
+                            <td rowspan="3">18</td>
+                            <td>Galvanizado</td>
+                            <td rowspan="2">2</td>
+                        </tr>
+                        <tr class="bg-zinc">
+                            <td>Negro</td>
+                        </tr>
+                        <tr class="bg-zinc">
+                            <td>Negro</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>140</td>
+                            <td>70</td>
+                            <td>20</td>
+                            <td>Galvanizado</td>
+                            <td>2</td>
+                        </tr>
+                        <tr class="bg-zinc">
+                            <td rowspan="2">160</td>
+                            <td rowspan="2">50</td>
+                            <td rowspan="2">20</td>
+                            <td>Galvanizado</td>
+                            <td rowspan="2">2</td>
+                        </tr>
+                        <tr class="bg-zinc">
+                            <td>Negro</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">180</td>
+                            <td rowspan="2">60</td>
+                            <td rowspan="2">20</td>
+                            <td>Galvanizado</td>
+                            <td rowspan="2">2</td>
+                        </tr>
+                        <tr>
+                            <td>Negro</td>
+                        </tr>
+                        <tr class="bg-zinc">
+                            <td>240</td>
+                            <td>65</td>
+                            <td>25</td>
+                            <td>Negro</td>
+                            <td>2.5</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="contenedor-imagen">
+                <img src="https://placehold.co/150x150" />
+            </div>
+        </div>
+
+
+
+    </div>
+        `
+    }
 
 ]
 
@@ -116,5 +275,5 @@ const cargarCodigo = (objeto) => {
 
 const cargarTitulo = (objeto) => {
     const titulo = document.getElementById('titulo');
-    titulo.textContent = objeto.titulo   
+    titulo.textContent = objeto.titulo
 }
