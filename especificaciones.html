@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css.map">
     <link rel="stylesheet" href="./css/especificaciones/especificaciones.css">
-    <link rel="stylesheet" href="./css/especificaciones/tailwind a css.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,20 +51,21 @@
     <section class="mx-5 text-center">
         <p class="display-6">Funcionan con la fuerza del viento, mejorando las condiciones del aire interno de su local
             o edificacion.</p>
+        <p class="display-6">Funcionan con tecnología avanzada, optimizando la ventilación y mejorando la calidad
+            del aire interno de su local o edificación</p>
     </section>
 
     <main>
-        <div class="container">
+        <div class="contenedor-principal">
 
-
-            <div class="bg-zinc-100 dark:bg-zinc-800 p-4 rounded-lg">
-                <div class="bg-red-500 text-white p-2 rounded-t-lg">
-                    <h2 class="text-lg font-bold">INFORMACIÓN GENERAL</h2>
+            <div class="contenedor-listas">
+                <div class="contenedor-titulo">
+                    <h2 class="">INFORMACIÓN GENERAL</h2>
                 </div>
-                <div class="grid grid-cols-5 gap-2 border-t border-zinc-300 dark:border-zinc-700">
-                    <div class="col-span-1 bg-red-500 text-white p-2">
-                        <h3 class="text-sm font-bold">Uso</h3>
-                        <ul class="list-disc list-inside text-white">
+                <div class="contenedor-info">
+                    <div class="contenedor-lista-roja">
+                        <h3 class="titulo-lista">Uso</h3>
+                        <ul>
                             <li>Hogares</li>
                             <li>Galpones</li>
                             <li>Tinglados</li>
@@ -73,22 +73,22 @@
                             <li>Cerramientos laterales</li>
                         </ul>
                     </div>
-                    <div class="col-span-1 p-2 border-r border-zinc-300 dark:border-zinc-700">
-                        <h3 class="text-sm font-bold">Espesores (mm)</h3>
-                        <ul class="list-disc list-inside">
+                    <div class="contenedor-lista-blanca">
+                        <h3 class="titulo-lista">Espesores (mm)</h3>
+                        <ul>
                             <li>1,5</li>
                             <li>1,6</li>
                             <li>2,0</li>
                             <li>2,5</li>
                         </ul>
                     </div>
-                    <div class="col-span-1 bg-red-500 text-white p-2">
-                        <h3 class="text-sm font-bold">Terminación</h3>
+                    <div class="contenedor-lista-roja">
+                        <h3 class="titulo-lista">Terminación</h3>
                         <p>Negro Galvanizado</p>
                     </div>
-                    <div class="col-span-2 p-2">
-                        <h3 class="text-sm font-bold">Accesorios</h3>
-                        <ul class="list-disc list-inside">
+                    <div class="contenedor-lista-accesorios">
+                        <h3 class="titulo-lista">Accesorios</h3>
+                        <ul>
                             <li>Fabricamos conectores que permiten encastrar los perfiles entre sí.</li>
                             <li>Bulonería importada: tornillos autorroscantes con arandela de neopreno vulcanizado
                                 para evitar goteras.</li>
@@ -100,112 +100,111 @@
 
 
 
-            <div class="p-4 rounded-lg shadow-md">
-                <div class="bg-red-500 p-2 rounded-t-lg text-white">
-                    <h2 class="text-lg font-bold">TABLA DE MEDIDAS</h2>
+            <div class="contenedor-principal-tabla">
+                <div class="contenedor-titulo-tabla">
+                    <h2>TABLA DE MEDIDAS</h2>
                 </div>
-                <div class="overflow-x-auto">
-                    <table class="min-w-full bg-white dark:bg-zinc-800">
+                <div class="contenedor-tabla">
+                    <table class="text-center">
                         <thead>
                             <tr>
-                                <th class="px-4 py-2 border">Alto (mm)</th>
-                                <th class="px-4 py-2 border">Ancho (mm)</th>
-                                <th class="px-4 py-2 border">Ala (mm)</th>
-                                <th class="px-4 py-2 border">Terminación</th>
-                                <th class="px-4 py-2 border">Espesor (mm)</th>
+                                <th>Alto (mm)</th>
+                                <th>Ancho (mm)</th>
+                                <th>Ala (mm)</th>
+                                <th>Terminación</th>
+                                <th>Espesor (mm)</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="bg-zinc-100">
-                                <td rowspan="3" class="px-4 py-2 border">100</td>
-                                <td rowspan="3" class="px-4 py-2 border">45</td>
-                                <td rowspan="3" class="px-4 py-2 border">15</td>
-                                <td class="px-4 py-2 border">Negro</td>
-                                <td class="px-4 py-2 border">1.5</td>
+                            <tr class="bg-zinc">
+                                <td rowspan="3">100</td>
+                                <td rowspan="3">45</td>
+                                <td rowspan="3">15</td>
+                                <td>Negro</td>
+                                <td>1.5</td>
                             </tr>
-                            <tr class="bg-zinc-100">
-                                <td class="px-4 py-2 border">Galvanizado</td>
-                                <td rowspan="2" class="px-4 py-2 border">2</td>
+                            <tr class="bg-zinc">
+                                <td>Galvanizado</td>
+                                <td rowspan="2">2</td>
                             </tr>
-                            <tr class="bg-zinc-100">
-                                <td class="px-4 py-2 border">Negro</td>
-                            </tr>
-                            <tr>
-                                <td rowspan="3" class="px-4 py-2 border">120</td>
-                                <td rowspan="2" class="px-4 py-2 border">50</td>
-                                <td rowspan="2" class="px-4 py-2 border">15</td>
-                                <td class="px-4 py-2 border">Galvanizado</td>
-                                <td class="px-4 py-2 border">2</td>
+                            <tr class="bg-zinc">
+                                <td>Negro</td>
                             </tr>
                             <tr>
-                                <td class="px-4 py-2 border">Negro</td>
-                                <td rowspan="2" class="px-4 py-2 border">2</td>
+                                <td rowspan="3">120</td>
+                                <td rowspan="2">50</td>
+                                <td rowspan="2">15</td>
+                                <td>Galvanizado</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Negro</td>
+                                <td rowspan="2">2</td>
 
                             </tr>
                             <tr>
-                                <td class="px-4 py-2 border">65</td>
-                                <td class="px-4 py-2 border">18</td>
-                                <td class="px-4 py-2 border">Galvanizado</td>
+                                <td>65</td>
+                                <td>18</td>
+                                <td>Galvanizado</td>
                             </tr>
-                            <tr class="bg-zinc-100">
-                                <td rowspan="3" class="px-4 py-2 border">140</td>
-                                <td rowspan="3" class="px-4 py-2 border">55</td>
-                                <td rowspan="3" class="px-4 py-2 border">18</td>
-                                <td class="px-4 py-2 border">Galvanizado</td>
-                                <td rowspan="2" class="px-4 py-2 border">2</td>
+                            <tr class="bg-zinc">
+                                <td rowspan="3">140</td>
+                                <td rowspan="3">55</td>
+                                <td rowspan="3">18</td>
+                                <td>Galvanizado</td>
+                                <td rowspan="2">2</td>
                             </tr>
-                            <tr class="bg-zinc-100">
-                                <td class="px-4 py-2 border">Negro</td>
+                            <tr class="bg-zinc">
+                                <td>Negro</td>
                             </tr>
-                            <tr class="bg-zinc-100">
-                                <td class="px-4 py-2 border">Negro</td>
-                                <td class="px-4 py-2 border">3</td>
-                            </tr>
-                            <tr>
-                                <td class="px-4 py-2 border">140</td>
-                                <td class="px-4 py-2 border">70</td>
-                                <td class="px-4 py-2 border">20</td>
-                                <td class="px-4 py-2 border">Galvanizado</td>
-                                <td class="px-4 py-2 border">2</td>
-                            </tr>
-                            <tr class="bg-zinc-100">
-                                <td rowspan="2" class="px-4 py-2 border">160</td>
-                                <td rowspan="2" class="px-4 py-2 border">50</td>
-                                <td rowspan="2" class="px-4 py-2 border">20</td>
-                                <td class="px-4 py-2 border">Galvanizado</td>
-                                <td rowspan="2" class="px-4 py-2 border">2</td>
-                            </tr>
-                            <tr class="bg-zinc-100">
-                                <td class="px-4 py-2 border">Negro</td>
+                            <tr class="bg-zinc">
+                                <td>Negro</td>
+                                <td>3</td>
                             </tr>
                             <tr>
-                                <td rowspan="2" class="px-4 py-2 border">180</td>
-                                <td rowspan="2" class="px-4 py-2 border">60</td>
-                                <td rowspan="2" class="px-4 py-2 border">20</td>
-                                <td class="px-4 py-2 border">Galvanizado</td>
-                                <td rowspan="2" class="px-4 py-2 border">2</td>
+                                <td>140</td>
+                                <td>70</td>
+                                <td>20</td>
+                                <td>Galvanizado</td>
+                                <td>2</td>
+                            </tr>
+                            <tr class="bg-zinc">
+                                <td rowspan="2">160</td>
+                                <td rowspan="2">50</td>
+                                <td rowspan="2">20</td>
+                                <td>Galvanizado</td>
+                                <td rowspan="2">2</td>
+                            </tr>
+                            <tr class="bg-zinc">
+                                <td>Negro</td>
                             </tr>
                             <tr>
-                                <td class="px-4 py-2 border">Negro</td>
+                                <td rowspan="2">180</td>
+                                <td rowspan="2">60</td>
+                                <td rowspan="2">20</td>
+                                <td>Galvanizado</td>
+                                <td rowspan="2">2</td>
                             </tr>
-                            <tr class="bg-zinc-100">
-                                <td class="px-4 py-2 border">240</td>
-                                <td class="px-4 py-2 border">65</td>
-                                <td class="px-4 py-2 border">25</td>
-                                <td class="px-4 py-2 border">Negro</td>
-                                <td class="px-4 py-2 border">2.5</td>
+                            <tr>
+                                <td>Negro</td>
+                            </tr>
+                            <tr class="bg-zinc">
+                                <td>240</td>
+                                <td>65</td>
+                                <td>25</td>
+                                <td>Negro</td>
+                                <td>2.5</td>
 
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="mt-4 flex justify-center">
-                    <img src="https://placehold.co/150x150" alt="Diagram" class="w-48 h-48 object-contain" />
+                <div class="contenedor-imagen">
+                    <img src="https://placehold.co/150x150" />
                 </div>
             </div>
 
 
-            <script src="https://cdn.tailwindcss.com"></script>
 
         </div>
     </main>
