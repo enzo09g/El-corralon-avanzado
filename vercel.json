@@ -1,12 +1,12 @@
 {
     "rewrites": [
       {
-        "source": "/especificaciones",
+        "source": "/Especificaciones",
         "destination": "/especificaciones.html"
       },
       {
-        "source": "/catalogo",
-        "destination": "/catalogo.html"
+        "source": "/Catálogo",
+        "destination": "/Catalogo.html"
       },
       {
         "source": "/contacto",
