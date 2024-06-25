@@ -7,7 +7,7 @@ const añadirEventos = () => {
     array.forEach(element => {
         element.addEventListener('click', () => {
             guardarLocalStorageEspecificacion(element)
-            window.location = "Especificaciones"
+            window.location = "especificaciones.html"
         })
     });
 }

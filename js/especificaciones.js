@@ -275,5 +275,8 @@ const cargarCodigo = (objeto) => {
 
 const cargarTitulo = (objeto) => {
     const titulo = document.getElementById('titulo');
+    const frase = document.querySelector('p');
+    frase.textContent = objeto.frase
     titulo.textContent = objeto.titulo
+
 }
