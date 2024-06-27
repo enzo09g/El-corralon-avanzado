@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css.map">
     <link rel="stylesheet" href="./css/productos/nuevoProductos.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -22,14 +28,14 @@
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-estilos">
                     <li class="nav-item nav-underline"><a class="nav-link" aria-current="page" href="Inicio">Inicio</a>
                     </li>
-                    <li class="nav-item nav-underline px-3"><a class="nav-link active" aria-current="page"
-                            href="Productos">Productos</a>
+                    <li class="nav-item nav-underline ps-lg-3  px-lg-0 px-3"><a class="nav-link active"
+                            aria-current="page" href="Productos">Productos</a>
                     </li>
-                    <li class="nav-item nav-underline pe-3"><a class="nav-link" href="Catalogo">Catálogo</a></li>
-                    <li class="nav-item nav-underline"><a class="nav-link" href="Contacto">Contacto</a></li>
+                    <li class="nav-item nav-underline ps-lg-3"><a class="nav-link" href="Catalogo">Catálogo</a></li>
+                    <li class="nav-item nav-underline px-lg-3"><a class="nav-link" href="Contacto">Contacto</a></li>
                 </ul>
             </div>
         </div>
@@ -40,7 +46,9 @@
 
             <div class="row mt-5">
                 <div class="list-group" id="cat-list-container">
-                    <div onclick="trasladarse(event)" class="shadow list-group-item list-group-item-action cursor-active" data-catNombre="chapas" data-url="Productos">
+                    <div onclick="trasladarse(event)"
+                        class="shadow list-group-item list-group-item-action cursor-active" data-catNombre="chapas"
+                        data-url="Productos">
                         <div class="row d-flex justify-content-center">
                             <div class="col-sm-12 col-md-3">
                                 <img src="./img/productos/chapas.jpeg" alt="${category.description}"
@@ -60,7 +68,8 @@
             </div>
             <div class="row mt-5">
                 <div class="list-group" id="cat-list-container">
-                    <div onclick="trasladarse(event)" data-catNombre="perfil c" class="shadow list-group-item list-group-item-action cursor-active">
+                    <div onclick="trasladarse(event)" data-catNombre="perfil c"
+                        class="shadow list-group-item list-group-item-action cursor-active">
                         <div class="row d-flex justify-content-center">
                             <div class="col-sm-12 col-md-3">
                                 <img src="./img/productos/perfil c.jpeg" alt="${category.description}"
@@ -80,7 +89,8 @@
             </div>
             <div class="row mt-5">
                 <div class="list-group" id="cat-list-container">
-                    <div onclick="trasladarse(event)" data-catNombre="accesorios para chapas" class="shadow list-group-item list-group-item-action cursor-active">
+                    <div onclick="trasladarse(event)" data-catNombre="accesorios para chapas"
+                        class="shadow list-group-item list-group-item-action cursor-active">
                         <div class="row d-flex justify-content-center">
                             <div class="col-sm-12 col-md-3">
                                 <img src="./img/productos/accesorios para chapas.jpeg" alt="${category.description}"
@@ -100,7 +110,8 @@
             </div>
             <div class="row mt-5">
                 <div class="list-group" id="cat-list-container">
-                    <div onclick="trasladarse(event)" data-catNombre="planchas" class="shadow list-group-item list-group-item-action cursor-active">
+                    <div onclick="trasladarse(event)" data-catNombre="planchas"
+                        class="shadow list-group-item list-group-item-action cursor-active">
                         <div class="row d-flex justify-content-center">
                             <div class="col-sm-12 col-md-3">
                                 <img src="./img/productos/planchas.jpeg" alt="${category.description}"
@@ -120,7 +131,8 @@
             </div>
             <div class="row mt-5">
                 <div class="list-group" id="cat-list-container">
-                    <div onclick="trasladarse(event)" data-catNombre="chapas lisas" class="shadow list-group-item list-group-item-action cursor-active">
+                    <div onclick="trasladarse(event)" data-catNombre="chapas lisas"
+                        class="shadow list-group-item list-group-item-action cursor-active">
                         <div class="row d-flex justify-content-center">
                             <div class="col-sm-12 col-md-3">
                                 <img src="./img/productos/chapas lisas.jpeg" alt="${category.description}"
@@ -140,7 +152,8 @@
             </div>
             <div class="row mt-5">
                 <div class="list-group" id="cat-list-container">
-                    <div onclick="trasladarse(event)" data-catNombre="extractores" class="shadow list-group-item list-group-item-action cursor-active">
+                    <div onclick="trasladarse(event)" data-catNombre="extractores"
+                        class="shadow list-group-item list-group-item-action cursor-active">
                         <div class="row d-flex justify-content-center">
                             <div class="col-sm-12 col-md-3">
                                 <img src="./img/productos/extractores.jpeg" alt="${category.description}"
@@ -160,7 +173,8 @@
             </div>
             <div class="row mt-5">
                 <div class="list-group" id="cat-list-container">
-                    <div onclick="trasladarse(event)" data-catNombre="caños" class="shadow list-group-item list-group-item-action cursor-active">
+                    <div onclick="trasladarse(event)" data-catNombre="caños"
+                        class="shadow list-group-item list-group-item-action cursor-active">
                         <div class="row d-flex justify-content-center">
                             <div class="col-sm-12 col-md-3">
                                 <img src="./img/productos/caños.jpeg" alt="${category.description}"
@@ -180,7 +194,8 @@
             </div>
             <div class="row mt-5">
                 <div class="list-group" id="cat-list-container">
-                    <div onclick="trasladarse(event)" data-catNombre="varillas" class="shadow list-group-item list-group-item-action cursor-active">
+                    <div onclick="trasladarse(event)" data-catNombre="varillas"
+                        class="shadow list-group-item list-group-item-action cursor-active">
                         <div class="row d-flex justify-content-center">
                             <div class="col-sm-12 col-md-3">
                                 <img src="./img/productos/varillas.jpeg" alt="${category.description}"
@@ -200,7 +215,8 @@
             </div>
             <div class="row mt-5">
                 <div class="list-group" id="cat-list-container">
-                    <div onclick="trasladarse(event)" data-catNombre="chapa labrada" class="shadow list-group-item list-group-item-action cursor-active">
+                    <div onclick="trasladarse(event)" data-catNombre="chapa labrada"
+                        class="shadow list-group-item list-group-item-action cursor-active">
                         <div class="row d-flex justify-content-center">
                             <div class="col-sm-12 col-md-3">
                                 <img src="./img/productos/Chapa labrada.jpeg" alt="${category.description}"
@@ -220,7 +236,8 @@
             </div>
             <div class="row mt-5">
                 <div class="list-group" id="cat-list-container">
-                    <div onclick="trasladarse(event)" data-catNombre="cielo raso" class="shadow list-group-item list-group-item-action cursor-active">
+                    <div onclick="trasladarse(event)" data-catNombre="cielo raso"
+                        class="shadow list-group-item list-group-item-action cursor-active">
                         <div class="row d-flex justify-content-center">
                             <div class="col-sm-12 col-md-3">
                                 <img src="./img/productos/Cielo raso.jpeg" alt="${category.description}"
@@ -238,7 +255,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
 
     </div>

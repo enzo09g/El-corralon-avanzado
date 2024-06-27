@@ -6,3 +6,12 @@
     width: 370px;
     height: 370px;
 }
+
+.imagenProducto{
+    transform: scale(1);
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
