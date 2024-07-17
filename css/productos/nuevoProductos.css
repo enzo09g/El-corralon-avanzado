@@ -12,3 +12,46 @@
 .shadow {
      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
+
+
+.animacion{
+    animation: mostrar linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
+}
+
+.animacion:hover {
+
+}
+
+@keyframes mostrar{
+
+    from{
+        translate: 0 100px;
+        opacity: 0;
+    }
+
+    to{
+        translate: 0 0;
+        opacity: 1;
+    }
+}
+
+
+.animacion:hover .text-end h3{
+    color: red;
+    animation-name: moverse;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+@keyframes moverse {
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(-600px);
+    }
+}
