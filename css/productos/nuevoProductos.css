@@ -29,7 +29,13 @@
     font-family: monospace;
 }
 
-
+.contenedor-descripcion{
+    display: grid;
+    place-content: center;
+    height: 100%;
+    font-family: monospace;
+    text-transform: uppercase;
+}
 
 .contenedor-lista li{
     list-style: none;
@@ -41,6 +47,11 @@
 
 .contenedor-lista li:hover{
     transform: scale(1.1);
+    text-decoration: underline;
+}
+
+.animacion h3{
+    text-transform: uppercase;
 }
 
 @keyframes mostrar {
