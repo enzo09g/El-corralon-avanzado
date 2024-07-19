@@ -10,48 +10,71 @@
 }
 
 .shadow {
-     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
 
-.animacion{
+.animacion {
     animation: mostrar linear both;
     animation-timeline: view();
     animation-range: entry 20% cover 30%;
 }
 
-.animacion:hover {
-
+.contenedor-lista {
+    padding-top: 1rem;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr 1fr ;
+    text-transform: uppercase;
+    font-family: monospace;
 }
 
-@keyframes mostrar{
 
-    from{
+
+.contenedor-lista li{
+    list-style: none;
+    cursor: pointer;
+    color: rgb(64, 142, 169);
+
+    transition: all 0.3s;
+}
+
+.contenedor-lista li:hover{
+    transform: scale(1.1);
+}
+
+@keyframes mostrar {
+
+    from {
         translate: 0 100px;
         opacity: 0;
+        transform: scale(0.8);
     }
 
-    to{
+    to {
         translate: 0 0;
         opacity: 1;
+        scale: 1;
     }
 }
 
 
-.animacion:hover .text-end h3{
-    color: red;
-    animation-name: moverse;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-fill-mode: both;
-}
-
-@keyframes moverse {
-    from{
-        transform: translateX(0);
-    }
-
-    to{
-        transform: translateX(-600px);
+@media (width > 576px) {
+    .contenedor-lista {
+        display: grid;
+        
     }
 }
+
+@media (width > 768px) {}
+
+@media (width > 992px) {
+    .contenedor-lista {
+        display: grid;
+
+    }
+}
+
+@media (width > 1200px) {}
+
+@media (width > 1400px) {}
