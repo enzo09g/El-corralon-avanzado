@@ -74,8 +74,9 @@ const obtenerSelector = () => {
   return new Promise((resolve) => {
     let interval = setInterval(() => {
       const selector = document.getElementById('selector-filtro')
-      if (selector.options.length == 7) {
+      if (selector.options.length > 1) {   // ACA ESTA EL PROBLEMAAAAA!!!!!!        <-----------------------------
         clearInterval(interval)
+        console.log(selector)
         resolve(selector)
       }
     }, 500);
