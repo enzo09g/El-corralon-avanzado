@@ -1,14 +1,14 @@
 .montserrat {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
+    font-weight: 600;
 }
 
 .card-body,
 .container,
 .site-header {
   font-family: 'Verdana', serif;
+
 }
 
 body {
