@@ -44,212 +44,224 @@
     <div class="container">
         <div class="row col-11 justify-content-center align-content-center m-0">
 
-            <div class="row mt-5">
+            <div class="row mt-5 animacion">
                 <div class="list-group" id="cat-list-container">
                     <div onclick="trasladarse(event)"
                         class="shadow list-group-item list-group-item-action cursor-active" data-catNombre="chapas"
                         data-url="Productos">
-                        <div class="row d-flex justify-content-center">
+                        <div class="row">
                             <div class="col-sm-12 col-md-3">
                                 <img src="./img/productos/chapas.jpeg" alt="${category.description}"
                                     class="img-thumbnail">
                             </div>
-                            <div class="row col-sm-12 col-md-7 text-sm-center text-md-start">
-                                <p class="fs-2 f-releway">Chapas</p>
-                                <p class="fs-5 f-releway">${category.description}</p>
-                            </div>
-                            <div
-                                class="col-sm-12 col-md-2 text-center d-flex justify-content-center align-items-center">
-                                <p class="text-muted">${category.productCount} artículos</p>
+                            <div class="row col-md-9">
+                                <div class="d-flex flex-column">
+                                    <h3 class="align-self-center">Chapas</h3>
+                                    <div class="contenedor-lista">
+                                        <li onclick="trasladarse(event)" data-tipo="ondulada comun">Chapa onda comun</li>
+                                        <li onclick="trasladarse(event)" data-tipo="trapezoidal">Chapa trapezoidal</li>
+                                        <li onclick="trasladarse(event)" data-tipo="economica titan">Chapa econcomica titan</li>
+                                        <li onclick="trasladarse(event)" data-tipo="comun charrua">Chapa charrua C/30</li>
+                                        <li onclick="trasladarse(event)" data-tipo="teja">ChapaTeja</li>
+                                        <li onclick="trasladarse(event)" data-tipo="translucida">Chapa translucida onda comun o trapezoidal</li>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row mt-5">
+            <div class="row mt-5 animacion">
                 <div class="list-group" id="cat-list-container">
                     <div onclick="trasladarse(event)" data-catNombre="perfil c"
                         class="shadow list-group-item list-group-item-action cursor-active">
-                        <div class="row d-flex justify-content-center">
+                        <div class="row">
                             <div class="col-sm-12 col-md-3">
                                 <img src="./img/productos/perfil c.jpeg" alt="${category.description}"
                                     class="img-thumbnail">
                             </div>
-                            <div class="row col-sm-12 col-md-7 text-sm-center text-md-start">
-                                <p class="fs-2 f-releway">Perfil C Galvanizado</p>
-                                <p class="fs-5 f-releway">${category.description}</p>
-                            </div>
-                            <div
-                                class="col-sm-12 col-md-2 text-center d-flex justify-content-center align-items-center">
-                                <p class="text-muted">${category.productCount} artículos</p>
+                            <div class="row col-md-9">
+                                <div class="d-flex flex-column">
+                                    <h3 class="align-self-center">Perfil C Galvanizado</h3>
+                                    <div class="contenedor-lista">
+                                        <li onclick="trasladarse(event)" data-tipo="perfil">Perfil</li>
+                                        <li onclick="trasladarse(event)" data-tipo="union">Union</li>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row mt-5">
+            <div class="row mt-5 animacion">
                 <div class="list-group" id="cat-list-container">
                     <div onclick="trasladarse(event)" data-catNombre="accesorios para chapas"
                         class="shadow list-group-item list-group-item-action cursor-active">
-                        <div class="row d-flex justify-content-center">
+                        <div class="row">
                             <div class="col-sm-12 col-md-3">
                                 <img src="./img/productos/accesorios para chapas.jpeg" alt="${category.description}"
                                     class="img-thumbnail">
                             </div>
-                            <div class="row col-sm-12 col-md-7 text-sm-center text-md-start">
-                                <p class="fs-2 f-releway">Accesorios para chapas</p>
-                                <p class="fs-5 f-releway">${category.description}</p>
-                            </div>
-                            <div
-                                class="col-sm-12 col-md-2 text-center d-flex justify-content-center align-items-center">
-                                <p class="text-muted">${category.productCount} artículos</p>
+                            <div class="row col-md-9">
+                                <div class="d-flex flex-column">
+                                    <h3 class="align-self-center">Accesorios para chapas</h3>
+                                    <div class="contenedor-descripcion">
+                                        <p>Explora nuestra colección de accesorios para chapas.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row mt-5">
+            <div class="row mt-5 animacion">
                 <div class="list-group" id="cat-list-container">
                     <div onclick="trasladarse(event)" data-catNombre="planchas"
                         class="shadow list-group-item list-group-item-action cursor-active">
-                        <div class="row d-flex justify-content-center">
+                        <div class="row">
                             <div class="col-sm-12 col-md-3">
                                 <img src="./img/productos/planchas.jpeg" alt="${category.description}"
                                     class="img-thumbnail">
                             </div>
-                            <div class="row col-sm-12 col-md-7 text-sm-center text-md-start">
-                                <p class="fs-2 f-releway">Planchas</p>
-                                <p class="fs-5 f-releway">${category.description}</p>
-                            </div>
-                            <div
-                                class="col-sm-12 col-md-2 text-center d-flex justify-content-center align-items-center">
-                                <p class="text-muted">${category.productCount} artículos</p>
+                            <div class="row col-md-9">
+                                <div class="d-flex flex-column">
+                                    <h3 class="align-self-center">Planchas</h3>
+                                    <div class="contenedor-descripcion">
+                                        <p>Explora nuestras variedades de planchas. </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row mt-5">
+            <div class="row mt-5 animacion">
                 <div class="list-group" id="cat-list-container">
                     <div onclick="trasladarse(event)" data-catNombre="chapas lisas"
                         class="shadow list-group-item list-group-item-action cursor-active">
-                        <div class="row d-flex justify-content-center">
+                        <div class="row">
                             <div class="col-sm-12 col-md-3">
                                 <img src="./img/productos/chapas lisas.jpeg" alt="${category.description}"
                                     class="img-thumbnail">
                             </div>
-                            <div class="row col-sm-12 col-md-7 text-sm-center text-md-start">
-                                <p class="fs-2 f-releway">Chapas lisas</p>
-                                <p class="fs-5 f-releway">${category.description}</p>
-                            </div>
-                            <div
-                                class="col-sm-12 col-md-2 text-center d-flex justify-content-center align-items-center">
-                                <p class="text-muted">${category.productCount} artículos</p>
+                            <div class="row col-md-9">
+                                <div class="d-flex flex-column">
+                                    <h3 class="align-self-center">Chapas Lisas</h3>
+                                    <div class="contenedor-lista">
+                                        <li onclick="trasladarse(event)" data-tipo="decapada">Decapada</li>
+                                        <li onclick="trasladarse(event)" data-tipo="aluminizada">Aluminizada</li>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row mt-5">
+            <div class="row mt-5 animacion">
                 <div class="list-group" id="cat-list-container">
                     <div onclick="trasladarse(event)" data-catNombre="extractores"
                         class="shadow list-group-item list-group-item-action cursor-active">
-                        <div class="row d-flex justify-content-center">
+                        <div class="row">
                             <div class="col-sm-12 col-md-3">
                                 <img src="./img/productos/extractores.jpeg" alt="${category.description}"
                                     class="img-thumbnail">
                             </div>
-                            <div class="row col-sm-12 col-md-7 text-sm-center text-md-start">
-                                <p class="fs-2 f-releway">Extractores</p>
-                                <p class="fs-5 f-releway">${category.description}</p>
-                            </div>
-                            <div
-                                class="col-sm-12 col-md-2 text-center d-flex justify-content-center align-items-center">
-                                <p class="text-muted">${category.productCount} artículos</p>
+                            <div class="row col-md-9">
+                                <div class="d-flex flex-column">
+                                    <h3 class="align-self-center">Extractores</h3>
+                                    <div class="contenedor-descripcion">
+                                       <p>Explora nuestra colección de extractores.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row mt-5">
+            <div class="row mt-5 animacion">
                 <div class="list-group" id="cat-list-container">
                     <div onclick="trasladarse(event)" data-catNombre="caños"
                         class="shadow list-group-item list-group-item-action cursor-active">
-                        <div class="row d-flex justify-content-center">
+                        <div class="row">
                             <div class="col-sm-12 col-md-3">
                                 <img src="./img/productos/caños.jpeg" alt="${category.description}"
                                     class="img-thumbnail">
                             </div>
-                            <div class="row col-sm-12 col-md-7 text-sm-center text-md-start">
-                                <p class="fs-2 f-releway">Caños</p>
-                                <p class="fs-5 f-releway">${category.description}</p>
-                            </div>
-                            <div
-                                class="col-sm-12 col-md-2 text-center d-flex justify-content-center align-items-center">
-                                <p class="text-muted">${category.productCount} artículos</p>
+                            <div class="row col-md-9">
+                                <div class="d-flex flex-column">
+                                    <h3 class="align-self-center">Caños estructurales</h3>
+                                    <div class="contenedor-lista">
+                                        <li onclick="trasladarse(event)" data-tipo="cuadrado">Cuadrado</li>
+                                        <li onclick="trasladarse(event)" data-tipo="oblongo">Oblongo</li>
+                                        <li onclick="trasladarse(event)" data-tipo="rectangular">Rectangular</li>
+                                        <li onclick="trasladarse(event)" data-tipo="redondo">Redondo</li>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row mt-5">
+            <div class="row mt-5 animacion">
                 <div class="list-group" id="cat-list-container">
                     <div onclick="trasladarse(event)" data-catNombre="varillas"
                         class="shadow list-group-item list-group-item-action cursor-active">
-                        <div class="row d-flex justify-content-center">
+                        <div class="row">
                             <div class="col-sm-12 col-md-3">
                                 <img src="./img/productos/varillas.jpeg" alt="${category.description}"
                                     class="img-thumbnail">
                             </div>
-                            <div class="row col-sm-12 col-md-7 text-sm-center text-md-start">
-                                <p class="fs-2 f-releway">Varillas</p>
-                                <p class="fs-5 f-releway">${category.description}</p>
-                            </div>
-                            <div
-                                class="col-sm-12 col-md-2 text-center d-flex justify-content-center align-items-center">
-                                <p class="text-muted">${category.productCount} artículos</p>
+                            <div class="row col-md-9">
+                                <div class="d-flex flex-column">
+                                    <h3 class="align-self-center">Varillas</h3>
+                                    <div class="contenedor-lista">
+                                        <li onclick="trasladarse(event)" data-tipo="cercha">Cercha</li>
+                                        <li onclick="trasladarse(event)" data-tipo="conformada">Conformada</li>
+                                        <li onclick="trasladarse(event)" data-tipo="lisa">Lisa</li>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row mt-5">
+            <div class="row mt-5 animacion">
                 <div class="list-group" id="cat-list-container">
                     <div onclick="trasladarse(event)" data-catNombre="chapa labrada"
                         class="shadow list-group-item list-group-item-action cursor-active">
-                        <div class="row d-flex justify-content-center">
+                        <div class="row">
                             <div class="col-sm-12 col-md-3">
                                 <img src="./img/productos/Chapa labrada.jpeg" alt="${category.description}"
                                     class="img-thumbnail">
                             </div>
-                            <div class="row col-sm-12 col-md-7 text-sm-center text-md-start">
-                                <p class="fs-2 f-releway">Chapa labrada</p>
-                                <p class="fs-5 f-releway">${category.description}</p>
-                            </div>
-                            <div
-                                class="col-sm-12 col-md-2 text-center d-flex justify-content-center align-items-center">
-                                <p class="text-muted">${category.productCount} artículos</p>
+                            <div class="row col-md-9">
+                                <div class="d-flex flex-column">
+                                    <h3 class="align-self-center">Chapa labrada</h3>
+                                    <div class="contenedor-descripcion">
+                                        <p>Explora nuestra seccion de chapas labradas</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row mt-5">
+            <div class="row mt-5 animacion">
                 <div class="list-group" id="cat-list-container">
                     <div onclick="trasladarse(event)" data-catNombre="cielo raso"
                         class="shadow list-group-item list-group-item-action cursor-active">
-                        <div class="row d-flex justify-content-center">
+                        <div class="row">
                             <div class="col-sm-12 col-md-3">
                                 <img src="./img/productos/Cielo raso.jpeg" alt="${category.description}"
                                     class="img-thumbnail">
                             </div>
-                            <div class="row col-sm-12 col-md-7 text-sm-center text-md-start">
-                                <p class="fs-2 f-releway">Cielo raso</p>
-                                <p class="fs-5 f-releway">${category.description}</p>
-                            </div>
-                            <div
-                                class="col-sm-12 col-md-2 text-center d-flex justify-content-center align-items-center">
-                                <p class="text-muted">${category.productCount} artículos</p>
+                            <div class="row col-md-9">
+                                <div class="d-flex flex-column">
+                                    <h3 class="align-self-center">Cielo raso</h3>
+                                    <div class="contenedor-descripcion">
+                                        <p>Explora nuestras variedades de cielos rasos.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -5,3 +5,22 @@
     font-weight: 700;
     letter-spacing: 0.1em;
 }
+
+
+@font-face {
+    font-family: 'Universal Sans Display';
+    src: url('./fonts/Universal-Sans-Display-Medium.woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Universal Sans Text';
+    src: url('./fonts/Universal-Sans-Text-Regular.woff2');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Universal Sans Display';
+    src: url('./fonts/Universal-Sans-Text-Regular.woff2');
+    font-weight: 100;
+}

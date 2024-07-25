@@ -4,7 +4,19 @@
 }
 
 body {
-    font-family: 'open sans';
+    font-family: 'Universal Sans Text';
+    font-weight: 100; 
+    font-size: 14px;
+}
+
+.font-Universal-Display{
+    font-family: 'Universal Sans Display';
+    font-weight: 700;
+}
+
+.font-Universal-Display{
+    font-family: 'Universal Sans Text';
+    font-weight: 100;
 }
 
 .titulo {
@@ -214,4 +226,22 @@ body {
         height: 12rem;
         object-fit: contain;
     }
+}
+
+@font-face {
+    font-family: 'Universal Sans Display';
+    src: url('./fonts/Universal-Sans-Display-Medium.woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Universal Sans Text';
+    src: url('./fonts/Universal-Sans-Text-Regular.woff2');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Universal Sans Display';
+    src: url('./fonts/Universal-Sans-Text-Regular.woff2');
+    font-weight: 100;
 }

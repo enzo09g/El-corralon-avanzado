@@ -4,7 +4,7 @@ const paginas = [
         frase: "Funcionan con la fuerza del viento, mejorando las condiciones del aire interno de su local o edificacion.",
         LDKey: "extractores",
         codigo: `        
-        <h1 class="m-3 text-capitalize titulo">CARACTERISTICAS</h1>
+        <h1 class="m-5 text-capitalize titulo">CARACTERISTICAS</h1>
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-4">
@@ -40,7 +40,7 @@ const paginas = [
                 </div>
                 <div class="col-6">
                     <ul class="datos">
-                        <span class="fw-bolder">Utilidades: </span>
+                        <span class="font-Universal-Display">Utilidades: </span>
                         <p>Estufas, parilleros y ventilacion.</p>
                     </ul>
                 </div>
