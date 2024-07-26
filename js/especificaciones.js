@@ -92,161 +92,238 @@ const paginas = [
         </div>`
     },
     {
-        titulo: "CHAPA TITAN",
-        frase: "",
-        LDKey: "chapa titan",
+        titulo: "PERFIL C GALVANIZADO",
+        frase: "Fabricamos el único perfil C en Uruguay reforzado con nervio en el alto",
+        LDKey: "perfil c",
         codigo: `
-        <div class="contenedor-principal">
 
-        <div class="contenedor-listas">
-            <div class="contenedor-titulo">
-                <h2 class="">INFORMACIÓN GENERAL</h2>
+                <div class="contenedor-principal">
+
+            <div class="contenedor-listas">
+                <div class="contenedor-titulo">
+                    <h2 class="">INFORMACIÓN GENERAL</h2>
+                </div>
+                <div class="contenedor-info">
+                    <div class="contenedor-lista-roja">
+                        <h3 class="titulo-lista">Uso</h3>
+                        <ul>
+                            <li>Hogares</li>
+                            <li>Galpones</li>
+                            <li>Tinglados</li>
+                            <li>Garages</li>
+                            <li>Cerramientos laterales</li>
+                        </ul>
+                    </div>
+                    <div class="contenedor-lista-blanca">
+                        <h3 class="titulo-lista">Espesores (mm)</h3>
+                        <ul>
+                            <li>1,5</li>
+                            <li>1,6</li>
+                            <li>2,0</li>
+                            <li>2,5</li>
+                        </ul>
+                    </div>
+                    <div class="contenedor-lista-roja">
+                        <h3 class="titulo-lista">Terminación</h3>
+                        <p>Negro - Galvanizado</p>
+                    </div>
+                    <div class="contenedor-lista-accesorios">
+                        <h3 class="titulo-lista">Accesorios</h3>
+                        <ul class="estilos-lista">
+                            <li>Fabricamos conectores que permiten encastrar los perfiles entre sí.</li>
+                            <li>Bulonería importada: tornillos autorroscantes con arandela de neopreno vulcanizado
+                                para evitar goteras.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="titulo-lista py-2">Ventajas</span>
+                        <ul class="fw-light">
+                            <li>Menor costo de materiales.</li>
+                            <li>Menor gasto en mano de obra(Se instalan con menos personal)</li>
+                            <li>Menor gasto en tornillerìa</li>
+                            <li>Mejor estètica</li>
+                            <li>Se cortan a medida sin limite de largo</li>
+                        </ul>
+                </div>
             </div>
-            <div class="contenedor-info">
-                <div class="contenedor-lista-roja">
-                    <h3 class="titulo-lista">Uso</h3>
-                    <ul>
-                        <li>Hogares</li>
-                        <li>Galpones</li>
-                        <li>Tinglados</li>
-                        <li>Garages</li>
-                        <li>Cerramientos laterales</li>
-                    </ul>
+
+
+
+
+            <div class="contenedor-principal-tabla">
+                <div class="contenedor-titulo-tabla">
+                    <h2>TABLA DE MEDIDAS</h2>
                 </div>
-                <div class="contenedor-lista-blanca">
-                    <h3 class="titulo-lista">Espesores (mm)</h3>
-                    <ul>
-                        <li>1,5</li>
-                        <li>1,6</li>
-                        <li>2,0</li>
-                        <li>2,5</li>
-                    </ul>
+                <div class="contenedor-tabla">
+                    <table class="text-center">
+                        <thead>
+                            <tr>
+                                <th>Alto (mm)</th>
+                                <th>Ancho (mm)</th>
+                                <th>Ala (mm)</th>
+                                <th>Terminación</th>
+                                <th>Espesor (mm)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-zinc">
+                                <td rowspan="3">100</td>
+                                <td rowspan="3">45</td>
+                                <td rowspan="3">15</td>
+                                <td>Negro</td>
+                                <td>1.5</td>
+                            </tr>
+                            <tr class="bg-zinc">
+                                <td>Galvanizado</td>
+                                <td rowspan="2">2</td>
+                            </tr>
+                            <tr class="bg-zinc">
+                                <td>Negro</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">120</td>
+                                <td rowspan="2">50</td>
+                                <td rowspan="2">15</td>
+                                <td>Galvanizado</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Negro</td>
+                                <td rowspan="2">2</td>
+
+                            </tr>
+                            <tr>
+                                <td>65</td>
+                                <td>18</td>
+                                <td>Galvanizado</td>
+                            </tr>
+                            <tr class="bg-zinc">
+                                <td rowspan="3">140</td>
+                                <td rowspan="3">55</td>
+                                <td rowspan="3">18</td>
+                                <td>Galvanizado</td>
+                                <td rowspan="2">2</td>
+                            </tr>
+                            <tr class="bg-zinc">
+                                <td>Negro</td>
+                            </tr>
+                            <tr class="bg-zinc">
+                                <td>Negro</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>140</td>
+                                <td>70</td>
+                                <td>20</td>
+                                <td>Galvanizado</td>
+                                <td>2</td>
+                            </tr>
+                            <tr class="bg-zinc">
+                                <td rowspan="2">160</td>
+                                <td rowspan="2">50</td>
+                                <td rowspan="2">20</td>
+                                <td>Galvanizado</td>
+                                <td rowspan="2">2</td>
+                            </tr>
+                            <tr class="bg-zinc">
+                                <td>Negro</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">180</td>
+                                <td rowspan="2">60</td>
+                                <td rowspan="2">20</td>
+                                <td>Galvanizado</td>
+                                <td rowspan="2">2</td>
+                            </tr>
+                            <tr>
+                                <td>Negro</td>
+                            </tr>
+                            <tr class="bg-zinc">
+                                <td>240</td>
+                                <td>65</td>
+                                <td>25</td>
+                                <td>Negro</td>
+                                <td>2.5</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="contenedor-lista-roja">
-                    <h3 class="titulo-lista">Terminación</h3>
-                    <p>Negro Galvanizado</p>
+                <div class="contenedor-imagen">
+                    <img src="./img/especificaciones/perfil c/perfil c medidas.jpeg" />
                 </div>
-                <div class="contenedor-lista-accesorios">
-                    <h3 class="titulo-lista">Accesorios</h3>
-                    <ul>
-                        <li>Fabricamos conectores que permiten encastrar los perfiles entre sí.</li>
-                        <li>Bulonería importada: tornillos autorroscantes con arandela de neopreno vulcanizado
-                            para evitar goteras.</li>
-                    </ul>
+            </div>
+
+            <div class="row mx-3 p-4">
+                <div class="col-sm-12 col-md-6 contenedor-principal-tabla">
+                    <div class="contenedor-titulo-tabla">
+                        <h2>ESPECIFICACIONES DE LUZ MÀXIMA PARA PERFILES C DE 2mm</h2>
+                    </div>
+                    <div class="contenedor-tabla">
+                        <table class="text-center">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        PERFIL C GALVANIZADO 2mm ESPESOR
+                                    </th>
+                                    <th>
+                                        LUZ MAXIMA (METROS APROX)
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>C80</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>C100</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>C120</td>
+                                    <td>5.5</td>
+                                </tr>
+                                <tr>
+                                    <td>C140</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>C160</td>
+                                    <td>6.5</td>
+                                </tr>
+                                <tr>
+                                    <td>C180</td>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <td>C240</td>
+                                    <td>8</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="d-flex col-md-6 col-sm-12 text-center align-items-center m-sm-3 m-md-0">
+                    <p><span class="fw-bold">Nota: </span> Los datos proporcionados son orientativos y deben ser
+                        considerados como una guía general. Es importante tener en cuenta que las condiciones pueden
+                        variar significativamente entre entornos urbanos y rurales. Para un análisis preciso y adaptado
+                        a cada situación específica, se recomienda consultar a un profesional cualificado.</p>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-center mt-5">Galería de Proyectos</h2>
+                <div class="galeria-de-imagenes">
+                    <img src="./img/especificaciones/perfil c/ejemplo1.jpeg" alt="">
+                    <img src="./img/especificaciones/perfil c/ejemplo2.jpeg" alt="">
+                    <img src="./img/especificaciones/perfil c/ejemplo3.jpeg" alt="">
+                    <img class="img-fea" src="./img/especificaciones/perfil c/ejemplo4.jpeg" alt="">
                 </div>
             </div>
         </div>
 
-
-
-
-        <div class="contenedor-principal-tabla">
-            <div class="contenedor-titulo-tabla">
-                <h2>TABLA DE MEDIDAS</h2>
-            </div>
-            <div class="contenedor-tabla">
-                <table class="text-center">
-                    <thead>
-                        <tr>
-                            <th>Alto (mm)</th>
-                            <th>Ancho (mm)</th>
-                            <th>Ala (mm)</th>
-                            <th>Terminación</th>
-                            <th>Espesor (mm)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-zinc">
-                            <td rowspan="3">100</td>
-                            <td rowspan="3">45</td>
-                            <td rowspan="3">15</td>
-                            <td>Negro</td>
-                            <td>1.5</td>
-                        </tr>
-                        <tr class="bg-zinc">
-                            <td>Galvanizado</td>
-                            <td rowspan="2">2</td>
-                        </tr>
-                        <tr class="bg-zinc">
-                            <td>Negro</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="3">120</td>
-                            <td rowspan="2">50</td>
-                            <td rowspan="2">15</td>
-                            <td>Galvanizado</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>Negro</td>
-                            <td rowspan="2">2</td>
-
-                        </tr>
-                        <tr>
-                            <td>65</td>
-                            <td>18</td>
-                            <td>Galvanizado</td>
-                        </tr>
-                        <tr class="bg-zinc">
-                            <td rowspan="3">140</td>
-                            <td rowspan="3">55</td>
-                            <td rowspan="3">18</td>
-                            <td>Galvanizado</td>
-                            <td rowspan="2">2</td>
-                        </tr>
-                        <tr class="bg-zinc">
-                            <td>Negro</td>
-                        </tr>
-                        <tr class="bg-zinc">
-                            <td>Negro</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <td>140</td>
-                            <td>70</td>
-                            <td>20</td>
-                            <td>Galvanizado</td>
-                            <td>2</td>
-                        </tr>
-                        <tr class="bg-zinc">
-                            <td rowspan="2">160</td>
-                            <td rowspan="2">50</td>
-                            <td rowspan="2">20</td>
-                            <td>Galvanizado</td>
-                            <td rowspan="2">2</td>
-                        </tr>
-                        <tr class="bg-zinc">
-                            <td>Negro</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2">180</td>
-                            <td rowspan="2">60</td>
-                            <td rowspan="2">20</td>
-                            <td>Galvanizado</td>
-                            <td rowspan="2">2</td>
-                        </tr>
-                        <tr>
-                            <td>Negro</td>
-                        </tr>
-                        <tr class="bg-zinc">
-                            <td>240</td>
-                            <td>65</td>
-                            <td>25</td>
-                            <td>Negro</td>
-                            <td>2.5</td>
-
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="contenedor-imagen">
-                <img src="https://placehold.co/150x150" />
-            </div>
-        </div>
-
-
-
-    </div>
         `
     }
 
@@ -275,8 +352,7 @@ const cargarCodigo = (objeto) => {
 
 const cargarTitulo = (objeto) => {
     const titulo = document.getElementById('titulo');
-    const frase = document.querySelector('p');
+    const frase = document.querySelector('h2');
     frase.textContent = objeto.frase
     titulo.textContent = objeto.titulo
-
 }
