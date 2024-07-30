@@ -325,6 +325,12 @@ const paginas = [
         </div>
 
         `
+    },
+    {
+        titulo: "BABETAS",
+        frase: "Optimiza la estabilidad y el acabado de tu estructura con la babeta: refuerza, protege y embellece tu hogar, galpon o tinglado.",
+        LDKey: "babetas",
+        codigo: ``
     }
 
 ]
