@@ -7,7 +7,7 @@
 .card-body,
 .container,
 .site-header {
-  font-family: 'Verdana', serif;
+    font-family: 'Verdana', serif;
 
 }
 
@@ -17,6 +17,19 @@ body {
 
 header {
     background: url("../img/index/291386452_1205138850330697_8645032790966375441_n.jpg");
+
+    
+}
+
+.class-overlay {
+    background-color: black;
+    opacity: 0.3;
+    z-index: 20;
+}
+
+header .container{
+    position: relative;
+    z-index: 50;
 }
 
 .redondo {
@@ -38,34 +51,64 @@ header {
     max-width: 60px;
 }
 
-li{
+li {
     list-style-type: none;
 }
 
-.nav-fixed{
+.nav-fixed {
     position: fixed;
     z-index: 100;
     width: 100%;
 }
 
-.whatsapp-titulo{
+.whatsapp-titulo {
     text-decoration: none;
     color: white;
 }
 
-.whatsapp-titulo:hover{
+.whatsapp-titulo:hover {
     color: greenyellow;
 }
 
-.ubicacion-titulo{
+.ubicacion-titulo {
     text-decoration: none;
     color: white;
 }
 
-.ubicacion-titulo:hover{
+.ubicacion-titulo:hover {
     color: lightblue;
 }
 
-.iClase{
+.iClase {
     font-size: 3.5rem
+}
+
+
+.text-blur-out {
+    -webkit-animation: text-blur-out 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) reverse both;
+    animation: text-blur-out 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) reverse both;
+}
+
+@-webkit-keyframes text-blur-out {
+    0% {
+        -webkit-filter: blur(0.01);
+        filter: blur(0.01);
+    }
+
+    100% {
+        -webkit-filter: blur(12px) opacity(0%);
+        filter: blur(12px) opacity(0%);
+    }
+}
+
+@keyframes text-blur-out {
+    0% {
+        -webkit-filter: blur(0.01);
+        filter: blur(0.01);
+    }
+
+    100% {
+        -webkit-filter: blur(12px) opacity(0%);
+        filter: blur(12px) opacity(0%);
+    }
 }

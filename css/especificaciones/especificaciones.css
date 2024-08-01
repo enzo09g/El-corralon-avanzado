@@ -5,16 +5,16 @@
 
 body {
     font-family: 'Universal Sans Text';
-    font-weight: 100; 
+    font-weight: 100;
     font-size: 14px;
 }
 
-.font-Universal-Display{
+.font-Universal-Display {
     font-family: 'Universal Sans Display';
     font-weight: 700;
 }
 
-.font-Universal-Display{
+.font-Universal-Display {
     font-family: 'Universal Sans Text';
     font-weight: 100;
 }
@@ -231,44 +231,77 @@ body {
 }
 
 
-.galeria-de-imagenes{
+.galeria-de-imagenes {
     padding: 16px 40px;
     /* columns: 2; */
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 16px;
-    
-    img{
+
+    img {
         width: 100%;
         border-radius: 4px;
-        padding: 8px 0px  
+        padding: 8px 0px
     }
 
-    &>.img-fea{
+    &>.img-fea {
         width: 100%;
         max-height: 342px;
     }
 }
+
+.galeria-de-imagenes-babetas {
+
+    display: grid;
+    padding: 8px 32px;
+    grid-gap: 16px;
+    grid-template-areas: 
+                "imagen1 imagen2 div"
+                "imagen1 imagen2 div"          
+    ;
+
+
+    &>div{
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    img{
+        width: 100%;
+        border-radius: 8px;
+
+        &:nth-of-type(1){
+            grid-area: imagen1;
+        }
+        &:nth-of-type(2){
+            grid-area: imagen2;
+        }
+    }
+}
+
 /* 
 @media (min-width: 1024px) and (max-width: 1279px){
     
 } */
 
-@media (1024px <= width <= 1279px){     /*nueva sintaxis */
-.galeria-de-imagenes{
+@media (1024px <=width <=1279px) {
+
+    /*nueva sintaxis */
+    .galeria-de-imagenes {
         padding: 16px 40px;
         /* columns: 2; */
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
         gap: 16px;
-    
-        img{
+
+        img {
             width: 100%;
             border-radius: 4px;
-            padding: 8px 0px  
+            padding: 8px 0px
         }
-    
-        &>.img-fea{
+
+        &>.img-fea {
             width: 100%;
             max-height: 269px;
         }
@@ -291,4 +324,39 @@ body {
     font-family: 'Universal Sans Display';
     src: url('./fonts/Universal-Sans-Text-Regular.woff2');
     font-weight: 100;
+}
+
+.cumbreras {
+    aspect-ratio: 6/5;
+}
+
+
+
+/* Telefonos x-Small bootstrap */ 
+@media screen and (max-width: 575px){
+    
+}
+
+/* Telefoos sm bootstrap */
+
+@media screen and(min-width: 576px) and (max-width: 767px){
+    
+}
+
+/* Tablets md boostrap */
+
+@media screen and(min-width: 768px) and (max-width: 991px){
+    
+}
+
+/* computadoras portátiles lg bootstrap */
+
+@media screen and (min-width: 992px) and (max-width: 1199px){
+
+}
+
+/* Comptuadoras de escritorio */
+
+@media screen and (min-width: 1200px) {
+    
 }
