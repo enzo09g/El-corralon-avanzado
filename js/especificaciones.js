@@ -331,31 +331,31 @@ const paginas = [
         frase: "Optimiza la estabilidad y el acabado de tu estructura con la babeta: refuerza, protege y embellece tu hogar, galpon o tinglado.",
         LDKey: "babetas",
         codigo: `
-        <section>
+            <section>
 
-            <section class="row p-5 text-center text-uppercase">
-                <div class="col-sm-12 col-md-4 p-sm-3 p-md-0">
-                    <h5 class="fw-bold fs-5">Babeta frontal</h5>
-                    <div class="px-2">
-                        <img class="img-fluid border rounded shadow-sm border-1"
-                            src="./img/especificaciones/babetas/RC babeta frontal.png" alt="">
-                    </div>
+        <section class="row p-5 text-center text-uppercase">
+            <div class="col-sm-12 col-md-4 p-sm-3 p-md-0">
+                <h5 class="fw-bold fs-5">Babeta frontal</h5>
+                <div class="px-2">
+                    <img class="img-fluid border rounded shadow-sm border-1"
+                        src="./img/especificaciones/babetas/RC babeta frontal.png" alt="">
                 </div>
-                <div class="col-sm-12 col-md-4 p-sm-3 p-md-0">
-                    <h5 class="fw-bold fs-5">Babeta lateral lisa</h5>
-                    <div class="px-2">
-                        <img class="img-fluid border rounded shadow-sm border-1"
-                            src="./img/especificaciones/babetas/RC babeta lisa.png" alt="">
-                    </div>
+            </div>
+            <div class="col-sm-12 col-md-4 p-sm-3 p-md-0">
+                <h5 class="fw-bold fs-5">Babeta lateral lisa</h5>
+                <div class="px-2">
+                    <img class="img-fluid border rounded shadow-sm border-1"
+                        src="./img/especificaciones/babetas/RC babeta lisa.png" alt="">
                 </div>
-                <div class="col-sm-12 col-md-4 p-sm-3 p-md-0">
-                    <h5 class="fw-bold fs-5">Babeta cubrepretil</h5>
-                    <div class="px-2">
-                        <img class="img-fluid border rounded shadow-sm border-1"
+            </div>
+            <div class="col-sm-12 col-md-4 p-sm-3 p-md-0">
+                <h5 class="fw-bold fs-5">Babeta cubrepretil</h5>
+                <div class="px-2">
+                    <img class="img-fluid border rounded shadow-sm border-1"
                         src="./img/especificaciones/babetas/RC babeta cubrepretil.png" alt="">
-                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
         <section class="p-5">
             <div class="card">
                 <div class="card-body">
@@ -378,7 +378,24 @@ const paginas = [
                         0.20 metros por 3 metros de largo aluminizada y de colores.</p>
                 </div>
             </div>
+
         </section>
+
+
+        <div>
+            <h2 class="text-center mt-5">Galería de Proyectos</h2>
+            <div class="galeria-de-imagenes-babetas">
+
+                <img src="./img/especificaciones/babetas/galeria/imgGaleria1.jpeg" alt="">
+                <img src="./img/especificaciones/babetas/galeria/imgGaleria4.jpeg" alt="">
+
+                <div>
+                    <img src="./img/especificaciones/babetas/galeria/imgGaleria2.jpeg" alt="">
+                    <img src="./img/especificaciones/babetas/galeria/imgGaleria3.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+
     </section>
         `
     },
@@ -387,7 +404,8 @@ const paginas = [
         frase: "Protege contra filtraciones, asegura una unión impecable y aporta un toque final de sofisticación a tu hogar, galpón o tinglado.",
         LDKey: "cumbreras",
         codigo: `
-            <section>
+
+                <section>
 
         <section class="row p-5 text-center text-uppercase">
             <div class="col-sm-12 col-md-4 p-sm-3 p-md-0">
@@ -422,17 +440,29 @@ const paginas = [
             <div class="card">
                 <div class="card-body">
                     <h5 class="text-uppercase">Cumbrera trapezoidal</h5>
-                    <p>Dato: Cubre 0.95 metros, ancho por lado 0.30 metros. <br>Aluminizada y de colores. Por ser fabricada con la misma chapa posee cierre totalmente hermético.</p>
+                    <p>Dato: Cubre 0.95 metros, ancho por lado 0.30 metros. <br>Aluminizada y de colores. Por ser
+                        fabricada con la misma chapa posee cierre totalmente hermético.</p>
                 </div>
             </div>
             <div class="card">
                 <div class="card-body">
                     <h5 class="text-uppercase">Cumbrera ondulada común</h5>
-                    <p>Dato: cubre 1 metro, ancho por lado 0.30 metros. <br>Aluminizada y de colores. Por ser fabricada con la misma chapa posee cierre totalmente hermético.</p>
+                    <p>Dato: cubre 1 metro, ancho por lado 0.30 metros. <br>Aluminizada y de colores. Por ser fabricada
+                        con la misma chapa posee cierre totalmente hermético.</p>
                 </div>
             </div>
         </section>
+
+        <div class="container d-flex justify-content-center aling-items-center">
+            <div class="w-75">
+                <img class="img-fluid" src="./img/especificaciones/cumbreras/SN cumbreras img 4.png" alt="">
+            </div>
+
+        </div>
+
+
     </section>
+
         `
     }
 
