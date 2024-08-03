@@ -1,0 +1,74 @@
+/* .nav-estilos {
+    font-family: "Work Sans", sans-serif !important;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+} */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 32px;
+    background-color: black;
+    /* background-color: rgb(66,66,66); */
+    color: white;
+    font-family: "Work Sans", sans-serif !important;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    position: sticky;
+    top: 0;
+    z-index: 60;
+    animation: navbarAnimacion linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 400px;
+
+
+    img {
+        height: 32px;
+        color: red;
+    }
+
+    &>ul {
+        margin: 0;
+        display: flex;
+
+        &>li>a {
+            display: inline-block;
+            color: currentColor;
+            text-decoration: none;
+            padding: 8px 16px;
+        }
+    }
+}
+
+@keyframes navbarAnimacion {
+    to {
+        background-color: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(5px);
+        letter-spacing: 0;
+        font-weight: 700;
+        color: black;
+    }
+}
+
+
+@font-face {
+    font-family: 'Universal Sans Display';
+    src: url('./fonts/Universal-Sans-Display-Medium.woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Universal Sans Text';
+    src: url('./fonts/Universal-Sans-Text-Regular.woff2');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Universal Sans Display';
+    src: url('./fonts/Universal-Sans-Text-Regular.woff2');
+    font-weight: 100;
+}
