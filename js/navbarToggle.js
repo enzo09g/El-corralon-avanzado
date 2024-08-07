@@ -22,23 +22,22 @@ function ToggleFunction() {
 }
 
 function backdropMenu() {
-    const li = document.querySelectorAll('.visibleUl li');
-    const menuBackdrop = document.querySelector('#menuBackdrop');
-    console.log(li)
+    const liArray = document.querySelectorAll('.visibleUl li');
+    const menu = document.getElementById('menuBackdrop')
 
-    li.forEach(item => {
+    liArray.forEach(item => {
         item.addEventListener('mouseenter', () => {
-            const { left, top, width, height } = item.getBoundingClientRect();
-            menuBackdrop.style.setProperty("--left", `${left}px`)
-            menuBackdrop.style.setProperty("--top", `${top}px`)
-            menuBackdrop.style.setProperty("--width", `${width}px`)
-            menuBackdrop.style.setProperty("--height", `${height}px`)
-            menuBackdrop.style.setProperty("opacity", 1);
+            const { width, top, left, height } = item.getBoundingClientRect();
+            menu.style.setProperty('--width', `${width}px`)
+            menu.style.setProperty('--top', `${top}px`)
+            menu.style.setProperty('--left', `${left}px`)
+            menu.style.setProperty('--height', `${height}px`)
+            menu.style.opacity = 1;
         })
-
         item.addEventListener('mouseleave', () => {
-            menuBackdrop.style.setProperty("opacity", 0);
+            menu.style.opacity = 0;
         })
     });
 
+    console.log(liArray)
 }
