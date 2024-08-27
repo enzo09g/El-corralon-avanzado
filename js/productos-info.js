@@ -397,7 +397,7 @@ function modificarPrespuesto() {
   let mensaje = carritoGlobal.map(objeto => `${objeto.cantidad} ${objeto.nombre} `).join('; ');
   let mensajeCodificado = encodeURIComponent(mensaje);
   let link = document.getElementById('link')
-  linkGlobal = `https://wa.me/59892731026?text=${mensajeCodificado}`
+  linkGlobal = `https://wa.me/59898716205?text=${mensajeCodificado}`
   link.href = linkGlobal
 }
 
