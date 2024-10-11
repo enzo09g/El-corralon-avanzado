@@ -6,31 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcular</title>
     <link rel="stylesheet" href="./css/calcular/calcular.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
 </head>
 
 <body>
     <div>
         <h1>Calculadora de materiales</h1>
     </div>
-    <main>
+    <main class="container">
         <aside class="left">
             <section class="leftDivs">
                 <header class="titulo">
                     <h2>Ingreso de datos</h2>
                 </header>
                 <div>
-                    <div class="subtitulo">
-                        <p>Dimensiones del cielorraso</p>
+                    <p class="text-center uppercase font-normal">Dimensiones del cielorraso</p>
+                </div>
+                <div class="div-dimensiones">
+                    <div class="inputs">
+                        <div>
+                            Lado
+                            <input min="1" value="1" step="0.1"
+                                class="text-sm h-6 rounded border text-center border-gray-500 w-24 focus:outline-none"
+                                type="number">
+                            m.
+                        </div>
+                        <div>
+                            Lado
+                            <input min="1" value="1" step="0.1"
+                                class="text-sm h-6 rounded border text-center border-gray-500 w-24 focus:outline-none"
+                                type="number">
+                            m.
+                        </div>
                     </div>
-
-                    <input type="text">
-                    <input type="text">
+                    <div class="mt-1 text-center text-base">
+                        Se considera una camara de aire
+                        <input min="1" value="1" step="0.1"
+                            class="text-sm h-6 text-center rounded border border-gray-500 w-16 focus:outline-none"
+                            type="number">
+                        m.
+                    </div>
                 </div>
             </section>
             <section class="leftDivs">
                 <header class="titulo">
-                    <h2>Titulo</h2>
+                    <h2>Tablillas y terminaciones</h2>
                 </header>
+                <div class="div-tablillas">
+                    <div class="tablillas-column pt-7 ps-8 flex flex-col gap-2">
+                        <div class="flex justify-between">
+                            <span>Tablilla</span>
+                            <select id="tablilla-opcion"
+                                class="w-3/5 border border-gray-500 focus: outline-none rounded ">
+                                <option value="6m.jpg">Blanco liso 6mm</option>
+                                <option value="10m.jpg">Blanco liso 10mm</option>
+                            </select>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Largo</span>
+                            <select id="selectLargo"
+                                class="w-3/5 text-center border border-gray-500 focus: outline-none rounded "></select>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Direccion</span>
+                            <select
+                                class="w-3/5 text-center border border-gray-500 focus: outline-none rounded "></select>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Terminacion</span>
+                            <select
+                                class="w-3/5 text-center border border-gray-500 focus: outline-none rounded "></select>
+                        </div>
+                    </div>
+                    <div class="tablillas-column flex justify-center">
+                        <div class="flex items-center">
+                            <img class="max-w-full h-auto" src="./img/calculadora/6m.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
             </section>
             <section class="leftDivs">
                 <header class="titulo">
@@ -47,6 +101,12 @@
 
         </aside>
     </main>
+
+    <template>
+        <option value=""></option>
+    </template>
+
+    <script src="./js/calculadora.js"></script>
 
 </body>
 
