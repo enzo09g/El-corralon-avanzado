@@ -30,7 +30,7 @@ main {
 }
 
 aside {
-    grid-column: 1 span;
+    grid-column: span 1;
     display: grid;
     /* border: 1px solid black; */
 }
@@ -40,11 +40,11 @@ aside.right {
 }
 
 aside.left {
-    grid-template-rows: 4fr 6fr 1fr 4fr;
+    grid-template-rows: 2fr 3fr 2fr 1fr;
 }
 
 section.leftDivs {
-    grid-row: 1span;
+    grid-row: span 1;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -73,5 +73,5 @@ header.titulo h2 {
 }
 
 .tablillas-column{
-    grid-column: 1 span;
+    grid-column: span 1;
 }

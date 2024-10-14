@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+    /* Actualizar por primera vez*/
+    const tablillaActual = actualizarImg()
+    actualizarSelectLargo(tablillaActual)
+    /* Actualizar por primera vez*/
+
     const selectTablillaOpcion = document.querySelector('#tablilla-opcion');
     selectTablillaOpcion.addEventListener('input', () => {
         const tablillaActual = actualizarImg()
@@ -6,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 })
 
-function actualizarImg(){
+function actualizarImg() {
     let src = "./img/calculadora/";
     const imgSrcOpcion = document.querySelector('#tablilla-opcion').value;
     const img = document.querySelector('img');
@@ -15,9 +20,25 @@ function actualizarImg(){
     return imgSrcOpcion;
 }
 
-function actualizarSelectLargo(tablilla){
-    if(tablilla == "6m.jpg"){
+function actualizarSelectLargo(tablilla) {
+    if (tablilla == "7m.jpg") {
+        borrarOpciones('#selectLargo')
         const selectLargo = document.querySelector('#selectLargo');
-        selectLargo.appendChild('')
+        const opciones = document.querySelector('#options6mm').content.cloneNode(true);
+        selectLargo.appendChild(opciones)
+    }
+
+    if (tablilla == '10m.jpg') {
+        borrarOpciones('#selectLargo')
+        const selectLargo = document.querySelector('#selectLargo');
+        const opciones = document.querySelector('#options10mm').content.cloneNode(true);
+        selectLargo.appendChild(opciones)
+    }
+}
+
+function borrarOpciones(selectTipo) {
+    const select = document.querySelector(selectTipo);
+    while (select.firstChild) {
+        select.removeChild(select.firstChild);
     }
 }

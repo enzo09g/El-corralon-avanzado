@@ -58,8 +58,8 @@
                         <div class="flex justify-between">
                             <span>Tablilla</span>
                             <select id="tablilla-opcion"
-                                class="w-3/5 border border-gray-500 focus: outline-none rounded ">
-                                <option value="6m.jpg">Blanco liso 6mm</option>
+                                class="w-3/5 border border-gray-500 focus: outline-none rounded text-center">
+                                <option value="7m.jpg">Blanco liso 7mm</option>
                                 <option value="10m.jpg">Blanco liso 10mm</option>
                             </select>
                         </div>
@@ -70,18 +70,22 @@
                         </div>
                         <div class="flex justify-between">
                             <span>Direccion</span>
-                            <select
-                                class="w-3/5 text-center border border-gray-500 focus: outline-none rounded "></select>
+                            <select class="w-3/5 text-center border border-gray-500 focus: outline-none rounded ">
+                                <option value="horizontal">Horizontal</option>
+                                <option value="vertical">Vertical</option>
+                            </select>
                         </div>
                         <div class="flex justify-between">
                             <span>Terminacion</span>
-                            <select
-                                class="w-3/5 text-center border border-gray-500 focus: outline-none rounded "></select>
+                            <select class="w-3/5 text-center border border-gray-500 focus: outline-none rounded ">
+                                <option value="perfil-l">Perfil L</option>
+                                <option value="perfil-c">Perfil C</option>
+                            </select>
                         </div>
                     </div>
                     <div class="tablillas-column flex justify-center">
                         <div class="flex items-center">
-                            <img class="max-w-full h-auto" src="./img/calculadora/6m.jpg" alt="">
+                            <img class="max-w-full h-auto" src="./img/calculadora/7m.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -90,6 +94,18 @@
                 <header class="titulo">
                     <h2>Titulo</h2>
                 </header>
+                <div class="div-tablillas">
+                    <div class="tablillas-column pt-7 ps-8">
+                        <div class="flex justify-between">
+                            <span>Aislantes</span>
+                            <select
+                                class="w-3/5 border border-gray-500 focus: outline-none rounded text-center">
+                                <option value="7m.jpg">Blanco liso 7mm</option>
+                                <option value="10m.jpg">Blanco liso 10mm</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section class="leftDivs">
                 <header class="titulo">
@@ -102,8 +118,12 @@
         </aside>
     </main>
 
-    <template>
-        <option value=""></option>
+    <template id="options6mm">
+        <option value="6mts">6 metros</option>
+        <option value="4mts">4 metros</option>
+    </template>
+    <template id="options10mm">
+        <option value="6mts">6 metros</option>
     </template>
 
     <script src="./js/calculadora.js"></script>
