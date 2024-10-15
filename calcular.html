@@ -26,30 +26,23 @@
                 <div class="div-dimensiones">
                     <div class="inputs">
                         <div>
-                            Lado
+                            Alto
                             <input min="1" value="1" step="0.1"
                                 class="text-sm h-6 rounded border text-center border-gray-500 w-24 focus:outline-none"
                                 type="number">
                             m.
                         </div>
                         <div>
-                            Lado
+                            Largo
                             <input min="1" value="1" step="0.1"
                                 class="text-sm h-6 rounded border text-center border-gray-500 w-24 focus:outline-none"
                                 type="number">
                             m.
                         </div>
                     </div>
-                    <div class="mt-1 text-center text-base">
-                        Se considera una camara de aire
-                        <input min="1" value="1" step="0.1"
-                            class="text-sm h-6 text-center rounded border border-gray-500 w-16 focus:outline-none"
-                            type="number">
-                        m.
-                    </div>
                 </div>
             </section>
-            <section class="leftDivs">
+            <section class="leftDivs pb-3">
                 <header class="titulo">
                     <h2>Tablillas y terminaciones</h2>
                 </header>
@@ -72,6 +65,7 @@
                             <span>Direccion</span>
                             <select class="w-3/5 text-center border border-gray-500 focus: outline-none rounded ">
                                 <option value="horizontal">Horizontal</option>
+                                <option value="economico">La mas economica</option>
                                 <option value="vertical">Vertical</option>
                             </select>
                         </div>
@@ -92,14 +86,13 @@
             </section>
             <section class="leftDivs">
                 <header class="titulo">
-                    <h2>Titulo</h2>
+                    <h2>Aislantes</h2>
                 </header>
                 <div class="div-tablillas">
                     <div class="tablillas-column pt-7 ps-8">
                         <div class="flex justify-between">
-                            <span>Aislantes</span>
-                            <select
-                                class="w-3/5 border border-gray-500 focus: outline-none rounded text-center">
+                            <span>Tipo</span>
+                            <select class="w-3/5 border border-gray-500 focus: outline-none rounded text-center">
                                 <option value="7m.jpg">Blanco liso 7mm</option>
                                 <option value="10m.jpg">Blanco liso 10mm</option>
                             </select>
@@ -109,12 +102,44 @@
             </section>
             <section class="leftDivs">
                 <header class="titulo">
-                    <h2>Titulo</h2>
+                    <h2>Estructura</h2>
                 </header>
+                <div class="grid grid-cols-[4fr_3fr]">
+                    <div class="ps-8 pt-6 flex flex-col gap-2">
+                        <div class="flex justify-between">
+                            <span>Perimetrales</span>
+                            <select class="w-3/5 border border-gray-500 focus: outline-none rounded text-center" name="" id="">
+                                <option value="">Hola</option>
+                            </select>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Colgantes</span>
+                            <select class="w-3/5 border border-gray-500 focus: outline-none rounded text-center" name="" id="">
+                                <option value="">Hola</option>
+                            </select>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Principales</span>
+                            <select class="w-3/5 border border-gray-500 focus: outline-none rounded text-center" name="" id="">
+                                <option value="">Hola</option>
+                            </select>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Red</span>
+                            <select class="w-3/5 border border-gray-500 focus: outline-none rounded text-center" name="" id="">
+                                <option value="">Hola</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
             </section>
         </aside>
-        <aside class="right">
+        <aside class="right w-full h-full">
+            <div class="w-full h-full p-8 overflow-x-scroll">
+                <div class="border bg-violet-300 border-red-600 h-full w-[300%]">
 
+                </div>
+            </div>
         </aside>
     </main>
 
@@ -126,7 +151,8 @@
         <option value="6mts">6 metros</option>
     </template>
 
-    <script src="./js/calculadora.js"></script>
+    <script src="./js/calculadoraUI.js"></script>
+    <script src="./js/calculadoraLogica.js"></script>
 
 </body>
 
