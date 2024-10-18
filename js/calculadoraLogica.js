@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     obtenerAltoContenedor()
 })
 
+
 const tomarDimensiones = () => {
     const inputs = document.querySelectorAll('input');
     const alto = inputs[0].value
@@ -25,8 +26,11 @@ const obtenerAltoContenedor = () => {
 }
 
 function colocarLargo() {
-    const largo = obtenerLargo();
+    let largo = obtenerLargo();
     const claseActual = obtenerClase()
+    if(largo > (innerWidth)){
+        largo = window.innerWidth - 100;
+    }
     const nuevaClase = `w-[${largo}px]`
 
     const contenedor = document.querySelector('#contenedorCieloRraso');
@@ -46,3 +50,5 @@ const obtenerClase = () => {
     return claseEnconrada = arrayClases.find(clase => clase.includes('w-['))
 
 }
+
+window.addEventListener('resize', colocarLargo)
