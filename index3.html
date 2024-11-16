@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -13,8 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="./css/nuevoIndex.css">
     <link rel="stylesheet" href="./css/navbar2.css">
+    <link rel="stylesheet" href="./css/nuevoIndex2.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,17 +25,30 @@
 <body class="bg-light">
 
     <!-- Nav-->
-    <nav class="fixedClass">
-        <!-- <object class="miSvg" data="./img/logo.svg" alt=""></object> -->
-        <img src="./img/logo.jpg" alt="">
-        <ul>
-            <li><a aria-current="page" href="Inicio">Inicio</a>
-            </li>
-            <li><a aria-current="page" href="Productos">Productos</a>
-            </li>
-            <li><a href="Catalogo">Catálogo</a></li>
-            <li><a href="Contacto">Contacto</a></li>
-        </ul>
+    <nav>
+        <div>
+            <!-- <object class="miSvg" data="./img/logo.svg" alt=""></object> -->
+            <img src="./img/logo.jpg" alt="">
+            <ul class="visibleUl">
+                <li><a href="Inicio">Inicio</a></li>
+                <li><a href="Productos">Productos</a></li>
+                <li><a href="Catalogo">Catálogo</a></li>
+                <li><a href="Contacto">Contacto</a></li>
+            </ul>
+            <div id="menuBackdrop">
+
+            </div>
+            <button id="btnToggle" class="bg-transparent border border-dark border-1 rounded"><i
+                    class="bi bi-list fs-5 text-white"></i></button>
+        </div>
+        <div class="menu" id="toggleMenu">
+            <ul>
+                <li><a href="Inicio">Inicio</a></li>
+                <li><a href="Productos">Productos</a></li>
+                <li><a href="Catalogo">Catálogo</a></li>
+                <li><a href="Contacto">Contacto</a></li>
+            </ul>
+        </div>
     </nav>
 
 
@@ -291,11 +304,9 @@
     <!-- Footer-->
 
 
-
-
-
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/bootstrap.bundle.min.js.map"></script>
+    <script src="./js/navbarToggle.js"></script>
 </body>
 
 </html>

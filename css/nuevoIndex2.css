@@ -1,0 +1,170 @@
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+}
+
+.card-body,
+.container,
+.site-header {
+    font-family: 'Verdana', serif;
+
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+
+header {
+    background: url("../img/index/291386452_1205138850330697_8645032790966375441_n.jpg");
+    /* height: 100vh;  */
+}
+
+/* @media (width > 1540px){
+    header{
+        height: auto; 
+    }
+}
+
+@media (500px <= width <= 992px){
+    header{
+        height: 120vh;
+    }
+}
+
+@media (width < 576px){
+    header{
+        height: 140vh;
+    }
+} */
+
+.class-overlay {
+    background-color: black;
+    opacity: 0.5;
+    z-index: 20;
+}
+
+header .container {
+    position: relative;
+    z-index: 50;
+}
+
+.redondo {
+    border-radius: 25px;
+}
+
+.hola {
+    height: 300px;
+    width: 300px;
+}
+
+.logoWhatsapp {
+    position: fixed;
+    right: 15px;
+    bottom: 10px;
+    z-index: 60;
+}
+
+.imgwhatsapp {
+    max-width: 60px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.whatsapp-titulo {
+    text-decoration: none;
+    color: white;
+}
+
+.whatsapp-titulo:hover {
+    color: greenyellow;
+}
+
+.ubicacion-titulo {
+    text-decoration: none;
+    color: white;
+}
+
+.ubicacion-titulo:hover {
+    color: lightblue;
+}
+
+.iClase {
+    font-size: 3.5rem
+}
+
+
+.text-blur-out {
+    -webkit-animation: text-blur-out 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) reverse both;
+    animation: text-blur-out 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) reverse both;
+}
+
+@-webkit-keyframes text-blur-out {
+    0% {
+        -webkit-filter: blur(0.01);
+        filter: blur(0.01);
+    }
+
+    100% {
+        -webkit-filter: blur(12px) opacity(0%);
+        filter: blur(12px) opacity(0%);
+    }
+}
+
+@keyframes text-blur-out {
+    0% {
+        -webkit-filter: blur(0.01);
+        filter: blur(0.01);
+    }
+
+    100% {
+        -webkit-filter: blur(12px) opacity(0%);
+        filter: blur(12px) opacity(0%);
+    }
+}
+
+
+/* Media querys navbar */
+
+#btnToggle {
+    display: none;
+}
+
+@media (width < 992px) {
+    nav>div {
+        &:nth-of-type(1) {
+            ul {
+                display: none;
+            }
+
+        }
+    }
+
+    #btnToggle {
+        display: block;
+    }
+}
+
+@media (width > 991px) {
+    .menu {
+        max-height: none;
+    }
+}
+
+.menu {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    padding: 0;
+    transition: all .3s ease-out;
+}
+
+.menu.active {
+    height: 140px;
+    opacity: 1;
+    padding: 5px 15px;
+}

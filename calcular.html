@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular</title>
+    <link rel="stylesheet" href="./css/calcular/calcular.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+</head>
+
+<body>
+    <div>
+        <h1>Calculadora de materiales</h1>
+    </div>
+    <main class="container">
+        <aside class="left">
+            <section class="leftDivs">
+                <header class="titulo">
+                    <h2>Ingreso de datos</h2>
+                </header>
+                <div>
+                    <p class="text-center uppercase font-normal">Dimensiones del cielorraso</p>
+                </div>
+                <div class="div-dimensiones">
+                    <div class="inputs">
+                        <div>
+                            Alto
+                            <input min="1" value="1" step="0.1"
+                                class="text-sm h-6 rounded border text-center border-gray-500 w-24 focus:outline-none"
+                                type="number">
+                            m.
+                        </div>
+                        <div>
+                            Largo
+                            <input min="1" value="1" step="0.1"
+                                class="text-sm h-6 rounded border text-center border-gray-500 w-24 focus:outline-none"
+                                type="number">
+                            m.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="leftDivs pb-3">
+                <header class="titulo">
+                    <h2>Tablillas y terminaciones</h2>
+                </header>
+                <div class="div-tablillas">
+                    <div class="tablillas-column pt-7 ps-8 flex flex-col gap-2">
+                        <div class="flex justify-between">
+                            <span>Tablilla</span>
+                            <select id="tablilla-opcion"
+                                class="w-3/5 border border-gray-500 focus: outline-none rounded text-center">
+                                <option value="7m.jpg">Blanco liso 7mm</option>
+                                <option value="10m.jpg">Blanco liso 10mm</option>
+                            </select>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Largo</span>
+                            <select id="selectLargo"
+                                class="w-3/5 text-center border border-gray-500 focus: outline-none rounded "></select>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Direccion</span>
+                            <select class="w-3/5 text-center border border-gray-500 focus: outline-none rounded ">
+                                <option value="horizontal">Horizontal</option>
+                                <option value="economico">La mas economica</option>
+                                <option value="vertical">Vertical</option>
+                            </select>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Terminacion</span>
+                            <select class="w-3/5 text-center border border-gray-500 focus: outline-none rounded ">
+                                <option value="perfil-l">Perfil L</option>
+                                <option value="perfil-c">Perfil C</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="tablillas-column flex justify-center">
+                        <div class="flex items-center">
+                            <img class="max-w-full h-auto" src="./img/calculadora/7m.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="leftDivs">
+                <header class="titulo">
+                    <h2>Aislantes</h2>
+                </header>
+                <div class="div-tablillas">
+                    <div class="tablillas-column pt-7 ps-8">
+                        <div class="flex justify-between">
+                            <span>Tipo</span>
+                            <select class="w-3/5 border border-gray-500 focus: outline-none rounded text-center">
+                                <option value="7m.jpg">Blanco liso 7mm</option>
+                                <option value="10m.jpg">Blanco liso 10mm</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="leftDivs">
+                <header class="titulo">
+                    <h2>Estructura</h2>
+                </header>
+                <div class="grid grid-cols-[4fr_3fr]">
+                    <div class="ps-8 pt-6 flex flex-col gap-2">
+                        <div class="flex justify-between">
+                            <span>Perimetrales</span>
+                            <select class="w-3/5 border border-gray-500 focus: outline-none rounded text-center" name=""
+                                id="">
+                                <option value="">Hola</option>
+                            </select>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Colgantes</span>
+                            <select class="w-3/5 border border-gray-500 focus: outline-none rounded text-center" name=""
+                                id="">
+                                <option value="">Hola</option>
+                            </select>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Principales</span>
+                            <select class="w-3/5 border border-gray-500 focus: outline-none rounded text-center" name=""
+                                id="">
+                                <option value="">Hola</option>
+                            </select>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Red</span>
+                            <select class="w-3/5 border border-gray-500 focus: outline-none rounded text-center" name=""
+                                id="">
+                                <option value="">Hola</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </aside>
+    </main>
+    <section class="h-[100vh]">
+        <div class="text-center w-full h-full p-8">
+            <div id="contenedorCieloRraso" class="width-max border bg-violet-300 border-red-600 w-[765px] max-w-full h-[95%] m-auto relative">
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <template id="options6mm">
+        <option value="6mts">6 metros</option>
+        <option value="4mts">4 metros</option>
+    </template>
+    <template id="options10mm">
+        <option value="6mts">6 metros</option>
+    </template>
+
+    <script src="./js/calculadoraUI.js"></script>
+    <script src="./js/calculadoraLogica.js"></script>
+
+</body>
+
+</html>
