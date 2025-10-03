@@ -1,4 +1,23 @@
-.bg-cover {
+/* --- Responsivo para Google Maps embed --- */
+.map-responsive {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.map-responsive iframe,
+.map-responsive embed,
+.map-responsive object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}.bg-cover {
     background: url("../../img/contacto/header3.0.jpeg");
     background-size: cover !important;
     background-position: center;
@@ -49,3 +68,21 @@ textarea {
 /* Comptuadoras de escritorio */
 
 /* Comptuadoras de escritorio */
+
+/* Fix overflow on mobile */
+@media (max-width: 576px) {
+    html, body {
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+    .container, .row, .col-12, .col-md-6, .col-lg-10, .col-6 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box;
+    }
+    .ms-4, .ms-1 {
+        margin-left: 0 !important;
+    }
+}
