@@ -8,7 +8,6 @@
     <title>Productos</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="icon" href="./img/logo/logo cuadrado.ico" type="image/x-icon" sizes="18x18">
-    <link rel="stylesheet" href="./css/bootstrap.min.css.map">
     <link rel="stylesheet" href="./css/productos/nuevoProductos.css">
     <link rel="stylesheet" href="./css/navbar.css">
 
@@ -23,7 +22,7 @@
     <nav class="navbar navbar-expand-lg mavbar-brand navbar-dark bg-dark">
         <div class="container px-5">
             <a class="navbar-brand" href="Inicio">
-                <img src="img/logo.jpg" alt="" height="37" width="160">
+                <img src="img/logo.jpg" alt="El Corralón" height="37" width="160">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -42,18 +41,26 @@
         </div>
     </nav>
 
+    <header class="page-hero page-hero-products">
+        <div class="container">
+            <p class="eyebrow">Barraca de hierros</p>
+            <h1>Productos por categoría</h1>
+            <p class="page-hero-copy">Chapas, perfiles, caños, varillas y accesorios para obra, techo e industria.</p>
+        </div>
+    </header>
+
     <div class="container">
         <div class="row col-11 justify-content-center align-content-center m-0">
 
             <div class="row mt-5 animacion">
-                <div class="list-group" id="cat-list-container">
+                <div class="list-group cat-list-container">
                     <div onclick="trasladarse(event)"
                         class="shadow list-group-item list-group-item-action cursor-active" data-catNombre="chapas"
                         data-url="Productos">
                         <div class="row">
                             <div class="col-sm-12 col-md-3">
-                                <img src="./img/productos/chapas.jpeg" alt="${category.description}"
-                                    class="img-thumbnail">
+                                <img src="./img/productos/chapas.jpeg" alt="Chapas" class="img-thumbnail"
+                                    loading="lazy">
                             </div>
                             <div class="row col-md-9">
                                 <div class="d-flex flex-column">
@@ -73,13 +80,13 @@
                 </div>
             </div>
             <div class="row mt-5 animacion">
-                <div class="list-group" id="cat-list-container">
+                <div class="list-group cat-list-container">
                     <div onclick="trasladarse(event)" data-catNombre="perfil c"
                         class="shadow list-group-item list-group-item-action cursor-active">
                         <div class="row">
                             <div class="col-sm-12 col-md-3">
-                                <img src="./img/productos/perfil c.jpeg" alt="${category.description}"
-                                    class="img-thumbnail">
+                                <img src="./img/productos/perfil c.jpeg" alt="Perfil C galvanizado"
+                                    class="img-thumbnail" loading="lazy">
                             </div>
                             <div class="row col-md-9">
                                 <div class="d-flex flex-column">
@@ -95,13 +102,13 @@
                 </div>
             </div>
             <div class="row mt-5 animacion">
-                <div class="list-group" id="cat-list-container">
+                <div class="list-group cat-list-container">
                     <div onclick="trasladarse(event)" data-catNombre="accesorios para chapas"
                         class="shadow list-group-item list-group-item-action cursor-active">
                         <div class="row">
                             <div class="col-sm-12 col-md-3">
-                                <img src="./img/productos/accesorios para chapas.jpeg" alt="${category.description}"
-                                    class="img-thumbnail">
+                                <img src="./img/productos/accesorios para chapas.jpeg"
+                                    alt="Accesorios para chapas" class="img-thumbnail" loading="lazy">
                             </div>
                             <div class="row col-md-9">
                                 <div class="d-flex flex-column">
@@ -116,13 +123,13 @@
                 </div>
             </div>
             <div class="row mt-5 animacion">
-                <div class="list-group" id="cat-list-container">
+                <div class="list-group cat-list-container">
                     <div onclick="trasladarse(event)" data-catNombre="planchas"
                         class="shadow list-group-item list-group-item-action cursor-active">
                         <div class="row">
                             <div class="col-sm-12 col-md-3">
-                                <img src="./img/productos/planchas.jpeg" alt="${category.description}"
-                                    class="img-thumbnail">
+                                <img src="./img/productos/planchas.jpeg" alt="Planchas" class="img-thumbnail"
+                                    loading="lazy">
                             </div>
                             <div class="row col-md-9">
                                 <div class="d-flex flex-column">
@@ -137,13 +144,13 @@
                 </div>
             </div>
             <div class="row mt-5 animacion">
-                <div class="list-group" id="cat-list-container">
+                <div class="list-group cat-list-container">
                     <div onclick="trasladarse(event)" data-catNombre="chapas lisas"
                         class="shadow list-group-item list-group-item-action cursor-active">
                         <div class="row">
                             <div class="col-sm-12 col-md-3">
-                                <img src="./img/productos/chapas lisas.jpeg" alt="${category.description}"
-                                    class="img-thumbnail">
+                                <img src="./img/productos/chapas lisas.jpeg" alt="Chapas lisas"
+                                    class="img-thumbnail" loading="lazy">
                             </div>
                             <div class="row col-md-9">
                                 <div class="d-flex flex-column">
@@ -159,13 +166,13 @@
                 </div>
             </div>
             <div class="row mt-5 animacion">
-                <div class="list-group" id="cat-list-container">
+                <div class="list-group cat-list-container">
                     <div onclick="trasladarse(event)" data-catNombre="extractores"
                         class="shadow list-group-item list-group-item-action cursor-active">
                         <div class="row">
                             <div class="col-sm-12 col-md-3">
-                                <img src="./img/productos/extractores.jpeg" alt="${category.description}"
-                                    class="img-thumbnail">
+                                <img src="./img/productos/extractores.jpeg" alt="Extractores"
+                                    class="img-thumbnail" loading="lazy">
                             </div>
                             <div class="row col-md-9">
                                 <div class="d-flex flex-column">
@@ -180,13 +187,13 @@
                 </div>
             </div>
             <div class="row mt-5 animacion">
-                <div class="list-group" id="cat-list-container">
+                <div class="list-group cat-list-container">
                     <div onclick="trasladarse(event)" data-catNombre="caños"
                         class="shadow list-group-item list-group-item-action cursor-active">
                         <div class="row">
                             <div class="col-sm-12 col-md-3">
-                                <img src="./img/productos/caños.jpeg" alt="${category.description}"
-                                    class="img-thumbnail">
+                                <img src="./img/productos/caños.jpeg" alt="Caños estructurales"
+                                    class="img-thumbnail" loading="lazy">
                             </div>
                             <div class="row col-md-9">
                                 <div class="d-flex flex-column">
@@ -204,13 +211,13 @@
                 </div>
             </div>
             <div class="row mt-5 animacion">
-                <div class="list-group" id="cat-list-container">
+                <div class="list-group cat-list-container">
                     <div onclick="trasladarse(event)" data-catNombre="varillas"
                         class="shadow list-group-item list-group-item-action cursor-active">
                         <div class="row">
                             <div class="col-sm-12 col-md-3">
-                                <img src="./img/productos/varillas.jpeg" alt="${category.description}"
-                                    class="img-thumbnail">
+                                <img src="./img/productos/varillas.jpeg" alt="Varillas" class="img-thumbnail"
+                                    loading="lazy">
                             </div>
                             <div class="row col-md-9">
                                 <div class="d-flex flex-column">
@@ -227,13 +234,13 @@
                 </div>
             </div>
             <div class="row mt-5 animacion">
-                <div class="list-group" id="cat-list-container">
+                <div class="list-group cat-list-container">
                     <div onclick="trasladarse(event)" data-catNombre="chapa labrada"
                         class="shadow list-group-item list-group-item-action cursor-active">
                         <div class="row">
                             <div class="col-sm-12 col-md-3">
-                                <img src="./img/productos/Chapa labrada.jpeg" alt="${category.description}"
-                                    class="img-thumbnail">
+                                <img src="./img/productos/Chapa labrada.jpeg" alt="Chapa labrada"
+                                    class="img-thumbnail" loading="lazy">
                             </div>
                             <div class="row col-md-9">
                                 <div class="d-flex flex-column">
@@ -248,13 +255,13 @@
                 </div>
             </div>
             <div class="row mt-5 animacion">
-                <div class="list-group" id="cat-list-container">
+                <div class="list-group cat-list-container">
                     <div onclick="trasladarse(event)" data-catNombre="cielo raso"
                         class="shadow list-group-item list-group-item-action cursor-active">
                         <div class="row">
                             <div class="col-sm-12 col-md-3">
-                                <img src="./img/productos/Cielo raso.jpeg" alt="${category.description}"
-                                    class="img-thumbnail">
+                                <img src="./img/productos/Cielo raso.jpeg" alt="Cielo raso"
+                                    class="img-thumbnail" loading="lazy">
                             </div>
                             <div class="row col-md-9">
                                 <div class="d-flex flex-column">
@@ -275,7 +282,6 @@
 
     <script src="./js/nuevoProductos-tarjetas.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/bootstrap.bundle.min.js.map"></script>
 </body>
 
 </html>

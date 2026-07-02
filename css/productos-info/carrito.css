@@ -24,17 +24,17 @@
 
 .carrito-menu {
     font-size: 19px;
-    color: black;
+    color: #fff;
 }
 
 .carrito-menu:hover {
     cursor: pointer;
-    color: blue;
+    color: #ffb4ae;
 }
 
 .carrito-con-productos{
     font-size: 21px;
-    color: red;
+    color: #ffb4ae;
 }
 
 .carrito-modal-titulo {

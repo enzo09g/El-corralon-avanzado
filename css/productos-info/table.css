@@ -2,7 +2,13 @@
 
 
 #contOpciones {
-  padding: 25px;
+  max-width: 1180px;
+  margin: 2.5rem auto 1rem;
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid var(--brand-line, #d9e0e4);
+  border-radius: 7px;
+  box-shadow: var(--brand-shadow, 0 18px 45px rgba(21, 25, 29, 0.10));
 }
 
 .controladores {
@@ -10,8 +16,10 @@
 }
 
 #contOpciones h1 {
-  letter-spacing: 4px;
-  font-size: 255%;
+  letter-spacing: 0;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 900;
+  color: var(--brand-text, #20262a);
 }
 
 /* Titulo y buscador */
@@ -31,16 +39,21 @@
 .contenedor {
   display: flex;
   justify-content: center;
+  padding: 0 1rem 3rem;
 }
 
 
 table {
-  border: 1px solid #ccc;
+  border: 1px solid var(--brand-line, #d9e0e4);
   border-collapse: collapse;
   margin: 0;
   padding: 0;
-  width: 95%;
+  width: min(1120px, 100%);
   table-layout: fixed;
+  background: #fff;
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: var(--brand-shadow, 0 18px 45px rgba(21, 25, 29, 0.10));
 }
 
 table caption {
@@ -49,8 +62,8 @@ table caption {
 }
 
 table tr {
-  background-color: #f8f8f8;
-  border: 1px solid #ddd;
+  background-color: #fff;
+  border: 1px solid var(--brand-line, #d9e0e4);
   padding: .35em;
 }
 
@@ -68,6 +81,8 @@ table th {
   font-size: .85em;
   letter-spacing: .1em;
   text-transform: uppercase;
+  background: var(--brand-ink, #15191d);
+  color: #fff;
 }
 
 @media screen and (max-width: 600px) {
@@ -120,9 +135,21 @@ table th {
 
 /* general styling */
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Work Sans", sans-serif;
   line-height: 1.25;
-  background-color: #DCE1DF;
+  background-color: var(--brand-steel, #f2f4f5);
   overflow-x: hidden;
 }
 
+.btn-info {
+  background: var(--brand-red, #e3342b);
+  border-color: var(--brand-red, #e3342b);
+  color: #fff;
+  font-weight: 800;
+}
+
+.btn-info:hover {
+  background: var(--brand-red-dark, #b72a24);
+  border-color: var(--brand-red-dark, #b72a24);
+  color: #fff;
+}

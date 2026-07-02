@@ -86,3 +86,91 @@ textarea {
         margin-left: 0 !important;
     }
 }
+
+.bg-cover {
+    min-height: 360px;
+    position: relative;
+    isolation: isolate;
+}
+
+.bg-cover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, rgba(21, 25, 29, 0.92), rgba(21, 25, 29, 0.44));
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Work Sans", Helvetica, Arial, sans-serif;
+    color: var(--brand-text, #20262a);
+}
+
+body {
+    background: var(--brand-steel, #f2f4f5);
+}
+
+.titulo {
+    font-size: 1em;
+    letter-spacing: 0;
+    text-align: left;
+    text-transform: none;
+}
+
+.titulo h1 {
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.Icontacto {
+    color: var(--brand-red, #e3342b);
+}
+
+.infoContacto {
+    color: var(--brand-text, #20262a);
+}
+
+.datos {
+    background: #fff;
+    margin-top: -3rem;
+    margin-bottom: 3rem;
+    border: 1px solid var(--brand-line, #d9e0e4);
+    border-radius: 7px;
+    box-shadow: var(--brand-shadow, 0 18px 45px rgba(21, 25, 29, 0.10));
+    position: relative;
+    z-index: 2;
+}
+
+.datos h2 {
+    color: var(--brand-text, #20262a);
+    font-weight: 850;
+}
+
+.datos .text-muted {
+    color: var(--brand-muted, #68747d) !important;
+}
+
+.map-responsive {
+    border-radius: 7px;
+    box-shadow: var(--brand-shadow, 0 18px 45px rgba(21, 25, 29, 0.10));
+}
+
+@media (max-width: 576px) {
+    .datos {
+        margin-top: 0;
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+        border-radius: 0;
+        border-left: 0;
+        border-right: 0;
+    }
+
+    .titulo {
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+    }
+}

@@ -7,7 +7,6 @@
     <title>EL CORRÁLON - BARRACA DE HIERROS</title>
     <link rel="icon" href="./img/logo/logo cuadrado.ico" type="image/x-icon" sizes="18x18">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css.map">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,10 +24,10 @@
 
 <body class="bg-light">
 
-    <nav class="navbar navbar-expand-lg mavbar-brand navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg mavbar-brand navbar-dark bg-dark site-navbar">
         <div class="container px-5">
             <a class="navbar-brand" href="Inicio">
-                <img src="img/logo.jpg" alt="" height="37" width="160">
+                <img src="img/logo.jpg" alt="El Corralón" height="37" width="160">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -48,22 +47,22 @@
         </div>
     </nav>
     <!-- Header-->
-    <header class="bg-dark py-5 position-relative">
+    <header class="bg-dark py-5 position-relative home-hero">
         <div class="class-overlay position-absolute top-0 h-100 w-100">
         </div>
         <div class="container">
             <div class="row gx-5 justify-content-between">
                 <div class="col-lg-6 col-sm-12">
-                    <div class="text-center my-5 py-4">
+                    <div class="text-center text-lg-start my-5 py-4 hero-copy">
                         <h1 class="display-3 fw-bolder text-white mb-2 text-blur-out">EL CORRÁLON</h1>
-                        <p class="display-6 text-white mb-4">Una empresa en Expansión</p>
-                        <div class="d-grid gap-3 mt-5 d-sm-flex justify-content-sm-center">
+                        <p class="display-6 text-white mb-4">Barraca de hierros en Salto</p>
+                        <div class="d-grid gap-3 mt-5 d-sm-flex justify-content-sm-center justify-content-lg-start">
                             <a class="btn btn-primary btn-lg px-4 me-sm-3" href="Productos">Productos</a>
                             <a class="btn btn-outline-light btn-lg px-4" href="Contacto">Contactanos!</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-lg-5 row d-flex justify-content-start align-content-around text-white">
+                <div class="col-sm-12 col-lg-5 row d-flex justify-content-start align-content-around text-white hero-contact">
                     <!-- Div whatsapp y telefono -->
                     <div class="col-sm-6 col-lg-12 d-flex row flex-lg-row">
                         <!-- Div whatsapp -->
@@ -92,39 +91,6 @@
         </div>
     </header>
 
-    <div id="carouselExampleIndicators" class="carousel slide container-md pt-4" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="./img/index/ofertas/sol y sombra.jpeg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="./img/index/ofertas/tanza.jpeg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="./img/index/ofertas/sol y sombra verde.jpeg" class="d-block w-100" alt="...">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-
-
     <div class="container bg-body-tertiary pt-3 pb-1" id="contenedorIndex">
         <div class="row">
             <div class="col-md-4">
@@ -133,7 +99,8 @@
                         <div class="carousel-item active">
                             <div class="card mb-4 shadow-sm custom-card cursor-active">
                                 <img class="d-block w-100 bd-placeholder-img card-img-top"
-                                    src="./imagenes para promocion/accesorios para techos.png" />
+                                    src="./imagenes para promocion/accesorios para techos.png"
+                                    alt="Accesorios para techos" loading="lazy" />
                                 <h3 class="m-3">Accesorios para techos</h3>
                                 <div class="card-body">
                                     <p class="card-text">
@@ -145,7 +112,7 @@
                         <div class="carousel-item">
                             <div class="card mb-4 shadow-sm custom-card cursor-active">
                                 <img class="d-block w-100 bd-placeholder-img card-img-top"
-                                    src="./imagenes para promocion/babetas.png" />
+                                    src="./imagenes para promocion/babetas.png" alt="Babetas" loading="lazy" />
                                 <h3 class="m-3">Babetas</h3>
                                 <div class="card-body">
                                     <p class="card-text">
@@ -157,7 +124,8 @@
                         <div class="carousel-item">
                             <div class="card mb-4 shadow-sm custom-card cursor-active">
                                 <img class="d-block w-100 bd-placeholder-img card-img-top"
-                                    src="imagenes para promocion/Canalones pluviales en pvc.png" />
+                                    src="imagenes para promocion/Canalones pluviales en pvc.png"
+                                    alt="Canalones pluviales en PVC" loading="lazy" />
                                 <h3 class="m-3">Canalones pluviales</h3>
                                 <div class="card-body">
                                     <p class="card-text">
@@ -175,7 +143,8 @@
                         <div class="carousel-item active">
                             <div class="card mb-4 shadow-sm custom-card cursor-active">
                                 <img class="d-block w-100 bd-placeholder-img card-img-top"
-                                    src="imagenes para promocion/caños estructurales.png" />
+                                    src="imagenes para promocion/caños estructurales.png"
+                                    alt="Caños estructurales" loading="lazy" />
                                 <h3 class="m-3">Caños estructurales</h3>
                                 <div class="card-body">
                                     <p class="card-text">
@@ -187,7 +156,8 @@
                         <div class="carousel-item">
                             <div class="card mb-4 shadow-sm custom-card cursor-active">
                                 <img class="d-block w-100 bd-placeholder-img card-img-top"
-                                    src="imagenes para promocion/chapa bobina.png" />
+                                    src="imagenes para promocion/chapa bobina.png" alt="Chapa en bobina"
+                                    loading="lazy" />
                                 <h3 class="m-3">Chapa bobina</h3>
                                 <div class="card-body">
                                     <p class="card-text">
@@ -199,7 +169,8 @@
                         <div class="carousel-item">
                             <div class="card mb-4 shadow-sm custom-card cursor-active">
                                 <img class="d-block w-100 bd-placeholder-img card-img-top"
-                                    src="imagenes para promocion/chapa charrua.png" />
+                                    src="imagenes para promocion/chapa charrua.png" alt="Chapa Charrúa"
+                                    loading="lazy" />
                                 <h3 class="m-3">Chapa charrua</h3>
                                 <div class="card-body">
                                     <p class="card-text">
@@ -217,7 +188,8 @@
                         <div class="carousel-item active">
                             <div class="card mb-4 shadow-sm custom-card cursor-active">
                                 <img class="d-block w-100 bd-placeholder-img card-img-top"
-                                    src="imagenes para promocion/chapa decapada.png" />
+                                    src="imagenes para promocion/chapa decapada.png" alt="Chapa decapada"
+                                    loading="lazy" />
                                 <h3 class="m-3">Chapa decapada</h3>
                                 <div class="card-body">
                                     <p class="card-text">
@@ -229,7 +201,8 @@
                         <div class="carousel-item">
                             <div class="card mb-4 shadow-sm custom-card cursor-active">
                                 <img class="d-block w-100 bd-placeholder-img card-img-top"
-                                    src="imagenes para promocion/chapa labrada.png" />
+                                    src="imagenes para promocion/chapa labrada.png" alt="Chapa labrada"
+                                    loading="lazy" />
                                 <h3 class="m-3">Chapa labrada</h3>
                                 <div class="card-body">
                                     <p class="card-text">
@@ -242,7 +215,8 @@
                         <div class="carousel-item">
                             <div class="card mb-4 shadow-sm custom-card cursor-active">
                                 <img class="d-block w-100 bd-placeholder-img card-img-top"
-                                    src="imagenes para promocion/chapa onda comun.png" />
+                                    src="imagenes para promocion/chapa onda comun.png" alt="Chapa onda común"
+                                    loading="lazy" />
                                 <h3 class="m-3">Chapa onda comun</h3>
                                 <div class="card-body">
                                     <p class="card-text">
@@ -273,7 +247,8 @@
         <div class="row mt-5">
             <div class="col-12 row d-flex justify-content-center">
                 <div class="col-12">
-                    <img style="width: 100%;" src="./img/index/codigoQr.jpeg" alt="">
+                    <img class="qr-contacto" src="./img/index/codigoQr.jpeg"
+                        alt="Código QR de contacto de El Corralón" loading="lazy">
                 </div>
             </div>
         </div>
@@ -316,7 +291,7 @@
     </section>
     <div class="logoWhatsapp">
         <a target="_blank" href="https://wa.me/59898716205">
-            <img class="imgwhatsapp" src="img/index/whatsapp-logo.webp">
+            <img class="imgwhatsapp" src="img/index/whatsapp-logo.webp" alt="Contactar por WhatsApp">
         </a>
     </div>
 
@@ -335,7 +310,6 @@
 
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js.map"></script>
 </body>
 
 </html>

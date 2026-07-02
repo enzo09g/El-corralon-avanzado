@@ -1,5 +1,6 @@
 .colorRojito{
-    color: red;
+    color: var(--brand-red, #e3342b);
+    font-weight: 800;
 }
 
 .imgTarjeta{
@@ -11,7 +12,46 @@
     transform: scale(1);
     transition: all 0.3s;
     cursor: pointer;
-    &:hover{
-        transform: scale(1.1);
-    }
+    aspect-ratio: 1 / 0.82;
+    object-fit: cover;
+    border-bottom: 1px solid var(--brand-line, #d9e0e4);
+}
+
+.imagenProducto:hover {
+    transform: scale(1.03);
+}
+
+.page-hero-catalog {
+    margin-bottom: 2.5rem;
+}
+
+.custom-card {
+    border: 1px solid var(--brand-line, #d9e0e4);
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: var(--brand-shadow, 0 18px 45px rgba(21, 25, 29, 0.10)) !important;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 50px rgba(21, 25, 29, 0.16) !important;
+}
+
+.custom-card h3 {
+    color: var(--brand-text, #20262a);
+    font-size: 1.1rem;
+    font-weight: 850;
+    line-height: 1.2;
+}
+
+.custom-card .card-text {
+    color: var(--brand-muted, #68747d);
+}
+
+.custom-card .btn {
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.82rem;
 }
