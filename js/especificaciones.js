@@ -49,7 +49,7 @@ const crearFichaProducto = ({
                     ${galeria.map(item => `
                         <figure>
                             <img src="${item.src}" alt="${item.alt}" loading="lazy">
-                            <figcaption>${item.credito}</figcaption>
+                            ${item.credito ? `<figcaption>${item.credito}</figcaption>` : ''}
                         </figure>
                     `).join('')}
                 </div>
@@ -63,6 +63,13 @@ const galeriaChapasCommons = [
         src: "./img/especificaciones/galeria-commons/corrugated-iron-sheets-commons.jpg",
         alt: "Chapas corrugadas apiladas",
         credito: `Foto: Evelyn Simak, CC BY-SA 2.0, via Wikimedia Commons.`
+    }
+];
+
+const galeriaChapaCharrua = [
+    {
+        src: "./img/especificaciones/galeria-commons/chapa-charrua-aluminizada-profesional.png",
+        alt: "Chapas aluminizadas nuevas apiladas"
     }
 ];
 
@@ -618,7 +625,7 @@ const paginas = [
             usos: ["Depósitos y anexos.", "Cubiertas secundarias.", "Soluciones económicas para techos livianos."],
             formatos: ["Disponible por largo.", "Consultar stock por medida.", "Se instala con accesorios estándar para chapa."],
             recomendaciones: ["Usar pendiente suficiente para una buena evacuación.", "Calcular cantidad considerando solapes.", "Evitar usar en estructuras sin apoyo adecuado."],
-            galeria: galeriaChapasCommons
+            galeria: galeriaChapaCharrua
         })
     },
     {
