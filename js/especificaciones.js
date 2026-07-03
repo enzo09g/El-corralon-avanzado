@@ -60,9 +60,8 @@ const crearFichaProducto = ({
 
 const galeriaChapasCommons = [
     {
-        src: "./img/especificaciones/galeria-commons/corrugated-iron-sheets-commons.jpg",
-        alt: "Chapas corrugadas apiladas",
-        credito: `Foto: Evelyn Simak, CC BY-SA 2.0, via Wikimedia Commons.`
+        src: "./img/especificaciones/galeria-commons/chapa-charrua-aluminizada-profesional.png",
+        alt: "Chapas aluminizadas nuevas apiladas"
     }
 ];
 
