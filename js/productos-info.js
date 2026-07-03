@@ -1,463 +1,459 @@
-// Obtener referencias a elementos del DOM por su ID
-const contenedorTitulo = document.getElementById('contenedorTitulo');
-const contenedorTabla = document.getElementById('contenedor');
 const cuerpoTabla = document.getElementById('cuerpoTabla');
-const carritoDiv = document.querySelector('.logoWhatsapp')
-let carritoGlobal = JSON.parse(localStorage.getItem('carrito')) || []
+const carritoDiv = document.querySelector('.logoWhatsapp');
+const WHATSAPP_NUMERO = '59898716205';
+
+let carritoGlobal = leerCarrito();
 let linkGlobal;
-
-// Declarar un arreglo vacío para almacenar tipos de productos
 let tipos = [];
-
-// Esta variable tendra la info del fetch traerInfo()
 let arrayProductos;
 
-async function traerInfo(json) {
+const $ = (selector) => document.querySelector(selector);
+const $$ = (selector) => Array.from(document.querySelectorAll(selector));
 
-  const response = await fetch(json)
-  const data = await response.json();
-  cambiarTitulo(data);
-  mostrarArticulos(data.objeto)
-  actualizarTipos(data.objeto)
-  actualizarOpciones()
-  fetchData(jsonNombre())
-  preFiltro()
-}
-
-async function fetchData(json) {   //Actualiza arrayProductos
-
-  const response = await fetch(json)
-  const data = await response.json();
-  arrayProductos = data;
-
-}
-
-function jsonNombre() {   // Retorna el nombre del JSON del local storage
-  let catNombre = localStorage.getItem('catNombre');
-  let URL = 'json/' + catNombre + '.json'
-  return URL;
-}
-
-function actualizarTipos(array) {
-  tipos = [];
-
-  for (let i of array) {
-    if (i.tipo) {
-      if (!(tipos.includes(i.tipo))) {
-        tipos.push(i.tipo);
-      }
-    }
+function leerCarrito() {
+  try {
+    return JSON.parse(localStorage.getItem('carrito')) || [];
+  } catch (e) {
+    localStorage.removeItem('carrito');
+    return [];
   }
+}
+
+function guardarCarrito() {
+  localStorage.setItem('carrito', JSON.stringify(carritoGlobal));
+}
+
+function jsonNombre() {
+  const catNombre = localStorage.getItem('catNombre') || 'caños';
+  localStorage.setItem('catNombre', catNombre);
+  return `json/${catNombre}.json`;
+}
+
+async function traerInfo(json) {
+  try {
+    const response = await fetch(json);
+
+    if (!response.ok) {
+      throw new Error(`No se pudo cargar ${json}`);
+    }
+
+    const data = await response.json();
+    arrayProductos = data;
+    cambiarTitulo(data);
+    actualizarTipos(data.objeto);
+    actualizarOpciones();
+    mostrarArticulos(data.objeto);
+    preFiltro();
+  } catch (error) {
+    console.error(error);
+    cuerpoTabla.innerHTML = `
+      <tr>
+        <td colspan="3">No se pudieron cargar los productos.</td>
+      </tr>
+    `;
+  }
+}
+
+function actualizarTipos(productos) {
+  tipos = [...new Set(productos.map(producto => producto.tipo).filter(Boolean))];
 }
 
 function actualizarOpciones() {
-  let selector = document.getElementById('selector-filtro');
+  const selector = document.getElementById('selector-filtro');
   selector.innerHTML = "";
 
-  let opcionDisable = document.createElement('option');
+  const opcionDisable = document.createElement('option');
   opcionDisable.value = "";
   opcionDisable.selected = true;
-  opcionDisable.textContent = "TIPO"
+  opcionDisable.textContent = "TIPO";
   opcionDisable.setAttribute("disabled", "disabled");
   selector.appendChild(opcionDisable);
-  if (tipos.length > 0) {
-    for (let i of tipos) {
-      let opcion = document.createElement('option');
-      opcion.value = i.toLowerCase();
-      opcion.textContent = i.toUpperCase();
-      selector.appendChild(opcion)
-    }
+
+  tipos.forEach(tipo => {
+    const opcion = document.createElement('option');
+    opcion.value = tipo.toLowerCase();
+    opcion.textContent = tipo.toUpperCase();
+    selector.appendChild(opcion);
+  });
+}
+
+function preFiltro() {
+  const selector = document.getElementById('selector-filtro');
+  const selectOpcion = localStorage.getItem('tipoNombre');
+
+  if (!selectOpcion || selector.options.length <= 1) {
+    return;
+  }
+
+  const indiceTipo = tipos.findIndex(tipo => selectOpcion === tipo.toLowerCase());
+
+  if (indiceTipo >= 0) {
+    selector.selectedIndex = indiceTipo + 1;
+    selector.dispatchEvent(new Event("change", { bubbles: true }));
   }
 }
 
-const obtenerSelector = () => {
-  return new Promise((resolve) => {
-    let interval = setInterval(() => {
-      const selector = document.getElementById('selector-filtro')
-      if (selector.options.length > 1) {   // ACA ESTA EL PROBLEMAAAAA!!!!!!        <-----------------------------
-        clearInterval(interval)
-        console.log(selector)
-        resolve(selector)
-      }
-    }, 500);
-  })
-}
-
-async function preFiltro() {
-  const selector = await obtenerSelector()
-  let selectOpcion = localStorage.getItem('tipoNombre');
-
-  for (let i = 0; i < tipos.length; i++) {
-    if (selectOpcion == tipos[i].toLowerCase()) {
-      var event = new Event("change", { bubbles: true });
-      selector.selectedIndex = (i + 1);
-      selector.dispatchEvent(event)
-    }
-  }
-}
-
-// Se puede mejorar
 function limpiarFIltros() {
-  localStorage.removeItem('tipoNombre')
-  let buscador = document.getElementById('buscador');
-  let selector = document.getElementById('selector-filtro');
-  if (selector.selectedIndex != 0) {
-    traerInfo(jsonNombre())
-  }
-  if (buscador.value != "") {
-    let event = new Event('keyup', { bubbles: true });
-    buscador.value = "";
-    buscador.dispatchEvent(event);
-  }
-  // let event = new Event('change', {bubbles : true});
-  // selector.selectedIndex = 0;
-  // selector.dispatchEvent(event);
+  const buscador = document.getElementById('buscador');
+  const selector = document.getElementById('selector-filtro');
+
+  localStorage.removeItem('tipoNombre');
+  buscador.value = "";
+  selector.selectedIndex = 0;
+  traerInfo(jsonNombre());
 }
 
 function mostrarLogo() {
   const btnWppModal = document.getElementById('wpButton');
   const menuCarrito = document.querySelector('.carrito-menu');
-  if (carritoGlobal.length >= 1) {
-    menuCarrito.classList.add('carrito-con-productos');
-    btnWppModal.removeAttribute('disabled')
+  const tieneProductos = carritoGlobal.length >= 1;
 
-    carritoDiv.classList.contains('d-none') ? carritoDiv.classList.remove('d-none') : carritoDiv
+  menuCarrito.classList.toggle('carrito-con-productos', tieneProductos);
+  carritoDiv.classList.toggle('d-none', !tieneProductos);
+
+  if (tieneProductos) {
+    btnWppModal.removeAttribute('disabled');
   } else {
-    menuCarrito.classList.remove('carrito-con-productos');
-    carritoDiv.classList.contains('d-none') ? carritoDiv : carritoDiv.classList.add('d-none')
-    btnWppModal.setAttribute('disabled', "")
+    btnWppModal.setAttribute('disabled', "");
   }
 }
 
 function añadirEventoBtnModal() {
   const btnWppModal = document.getElementById('wpButton');
   btnWppModal.addEventListener('click', () => {
-    // window.location.href = linkGlobal
     window.open(linkGlobal, '_blank');
-  })
-}
-
-function mostrarArticulos(array) {
-  mostrarLogo()
-  cuerpoTabla.innerHTML = ''
-  array.forEach((element, index) => {
-    if (carritoGlobal.some(item => item.nombre == element.nombre)) {
-      let elementoEnCarrito = carritoGlobal.find(elementoCarrito => elementoCarrito.nombre == element.nombre)
-
-      cuerpoTabla.innerHTML += `
-      <tr data-descripcion="${element.tipo}" class="fila-producto">
-        <td class="tabla-nombre" id="${index}" data-label="Nombre">${element.nombre}</td>
-        <td data-label="Cantidad">
-          <div>
-            <input min="1" type="number" data-btnnombre="${element.nombre}" placeholder="Cantidad..." class="form-control form-control-sm is-valid" id="${index}" value="${elementoEnCarrito.cantidad}" required>
-            <div class="invalid-feedback">
-            Ingrese una cantidad.
-            </div>
-          </div></td>
-
-        <td data-label="Lista de presupuesto"><i class="bi bi-cart3 carrito-vacio" id="${index}" data-btnnombre="${element.nombre}" style="color: cornflowerblue; font-size: 1.3rem"></i><i data-btnnombre="${element.nombre}" id="${index}" class="bi bi-trash mx-5 borrar" style="font-size: 1.3rem"></i></td>
-      </tr>
-      `
-
-    } else {
-      cuerpoTabla.innerHTML += `
-          <tr data-descripcion="${element.tipo}" class="fila-producto">
-            <td class="tabla-nombre" id="${index}" data-label="Nombre">${element.nombre}</td>
-            <td data-label="Cantidad">
-              <div>
-                <input min="1" type="number" data-btnnombre="${element.nombre}" placeholder="Cantidad..." class="form-control form-control-sm" id="${index}" required">
-                <div class="invalid-feedback">
-                Ingrese una cantidad.
-                </div>
-              </div></td>
-  
-            <td data-label="Lista de presupuesto"><i class="bi bi-cart3 carrito-vacio" id="${index}" data-btnnombre="${element.nombre}" style="font-size: 1.3rem"></i><i id="${index}" data-btnnombre="${element.nombre}" class="bi bi-trash mx-5 borrar d-none" style="font-size: 1.3rem"></i></td>
-          </tr>
-          `
-    }
-  });
-
-
-
-  const arrayCarrito = Array.from(document.getElementsByClassName('carrito-vacio'));
-  const botonBorrar = Array.from(document.getElementsByClassName('borrar'));
-  añadirEventoCarrito(arrayCarrito);
-  añadirEventoBorrar(botonBorrar);
-}
-
-function añadirEventoCarrito(array) {
-  array.forEach(element => {
-    element.addEventListener('click', () => {
-      let indexCantidades = parseInt(element.id) + 1
-      const arrayNombres = Array.from(document.getElementsByTagName('td'))
-      const arrayCantidades = Array.from(document.getElementsByTagName('input'));
-      const botonBorrar = Array.from(document.getElementsByClassName('borrar'))[element.id];
-
-      let nombre = arrayNombres.find(elemento => elemento.id == element.id).innerHTML
-      let inputCantidad = arrayCantidades[indexCantidades]
-      let cantidad = inputCantidad.value
-
-      if (!cantidad || cantidad < 1) {
-        let elementoRepetido = carritoGlobal.find(element => element.nombre == nombre)
-        let indice = carritoGlobal.indexOf(elementoRepetido);
-        if (elementoRepetido) {
-          carritoGlobal.splice(indice, 1)
-          modificarPrespuesto()
-          actualizarCarrito(carritoGlobal)
-          enviarAlModal("añadirEventoCarrito")
-          mostrarLogo()
-        }
-        inputCantidad.classList.contains("is-valid") ? inputCantidad.classList.remove("is-valid") : inputCantidad
-        inputCantidad.classList.add('is-invalid')
-        element.style = "font-size: 1.3rem"
-        botonBorrar.classList.contains('d-none') ? botonBorrar : botonBorrar.classList.add('d-none')
-        setTimeout(() => {
-          inputCantidad.classList.contains('is-invalid') ? inputCantidad.classList.remove('is-invalid') : inputCantidad
-        }, 8000);
-      } else {
-        inputCantidad.classList.contains("is-invalid") ? inputCantidad.classList.remove("is-invalid") : inputCantidad
-        inputCantidad.classList.add("is-valid")
-        element.style = "color: cornflowerblue; font-size: 1.3rem"
-        botonBorrar.classList.remove('d-none')
-        let producto = {
-          "nombre": nombre,
-          "cantidad": cantidad
-        }
-        enviarAlCarrito(producto)
-        enviarAlModal("añadirEventoCarrito")
-        mostrarLogo()
-
-      }
-
-    })
   });
 }
 
-function añadirEventoBorrar(array) {
-  array.forEach(element => {
-    element.addEventListener('click', () => {
-      let indexCantidades = parseInt(element.id) + 1
-      const arrayNombres = Array.from(document.getElementsByTagName('td'))
-      const arrayCantidades = Array.from(document.getElementsByTagName('input'));
-      const arrayCarrito = Array.from(document.getElementsByClassName('carrito-vacio'))
-      arrayCarrito[element.id].style = "font-size: 1.3rem"
-      let inputCantidad = arrayCantidades[indexCantidades]
-      inputCantidad.value = ""
-      let nombre = arrayNombres.find(elemento => elemento.id == element.id).innerHTML
+function productoEnCarrito(nombre) {
+  return carritoGlobal.find(producto => producto.nombre === nombre);
+}
 
-      inputCantidad.classList.contains('is-valid') ? inputCantidad.classList.remove('is-valid') : inputCantidad
-      inputCantidad.classList.contains('is-invalid') ? inputCantidad.classList.remove('is-invalid') : inputCantidad
-      element.classList.add('d-none')
+function crearFilaProducto(producto, index) {
+  const productoGuardado = productoEnCarrito(producto.nombre);
+  const fila = document.createElement('tr');
+  fila.className = 'fila-producto';
+  fila.dataset.descripcion = producto.tipo || '';
+  fila.dataset.nombre = producto.nombre;
 
-      borrarDelCarrito(nombre)
-      enviarAlModal("añadirEventoBorrar")
-      mostrarLogo()
+  const celdaNombre = document.createElement('td');
+  celdaNombre.className = 'tabla-nombre';
+  celdaNombre.dataset.label = 'Nombre';
+  celdaNombre.textContent = producto.nombre;
 
-    })
+  const inputCantidad = document.createElement('input');
+  inputCantidad.min = '1';
+  inputCantidad.type = 'number';
+  inputCantidad.placeholder = 'Cantidad...';
+  inputCantidad.className = 'form-control form-control-sm';
+  inputCantidad.dataset.nombre = producto.nombre;
+  inputCantidad.required = true;
+
+  if (productoGuardado) {
+    inputCantidad.value = productoGuardado.cantidad;
+    inputCantidad.classList.add('is-valid');
+  }
+
+  const invalidFeedback = document.createElement('div');
+  invalidFeedback.className = 'invalid-feedback';
+  invalidFeedback.textContent = 'Ingrese una cantidad.';
+
+  const celdaCantidad = document.createElement('td');
+  celdaCantidad.dataset.label = 'Cantidad';
+  const inputWrapper = document.createElement('div');
+  inputWrapper.append(inputCantidad, invalidFeedback);
+  celdaCantidad.appendChild(inputWrapper);
+
+  const btnCarrito = document.createElement('i');
+  btnCarrito.className = 'bi bi-cart3 carrito-vacio';
+  btnCarrito.dataset.nombre = producto.nombre;
+  btnCarrito.style.fontSize = '1.3rem';
+
+  const btnBorrar = document.createElement('i');
+  btnBorrar.className = 'bi bi-trash mx-5 borrar';
+  btnBorrar.dataset.nombre = producto.nombre;
+  btnBorrar.style.fontSize = '1.3rem';
+
+  if (productoGuardado) {
+    btnCarrito.style.color = 'cornflowerblue';
+  } else {
+    btnBorrar.classList.add('d-none');
+  }
+
+  const celdaAcciones = document.createElement('td');
+  celdaAcciones.dataset.label = 'Lista de presupuesto';
+  celdaAcciones.append(btnCarrito, btnBorrar);
+
+  fila.append(celdaNombre, celdaCantidad, celdaAcciones);
+  return fila;
+}
+
+function mostrarArticulos(productos) {
+  mostrarLogo();
+  cuerpoTabla.innerHTML = '';
+  const fragment = document.createDocumentFragment();
+
+  productos.forEach((producto, index) => {
+    fragment.appendChild(crearFilaProducto(producto, index));
   });
+
+  cuerpoTabla.appendChild(fragment);
+}
+
+function obtenerElementosProducto(nombre) {
+  const inputCantidad = document.querySelector(`input[data-nombre="${CSS.escape(nombre)}"]`);
+  const btnCarrito = document.querySelector(`.carrito-vacio[data-nombre="${CSS.escape(nombre)}"]`);
+  const btnBorrar = document.querySelector(`.borrar[data-nombre="${CSS.escape(nombre)}"]`);
+
+  return { inputCantidad, btnCarrito, btnBorrar };
+}
+
+function marcarProductoAgregado(nombre, cantidad) {
+  const { inputCantidad, btnCarrito, btnBorrar } = obtenerElementosProducto(nombre);
+
+  if (!inputCantidad || !btnCarrito || !btnBorrar) {
+    return;
+  }
+
+  inputCantidad.classList.remove('is-invalid');
+  inputCantidad.classList.add('is-valid');
+  inputCantidad.value = cantidad;
+  btnCarrito.style.color = 'cornflowerblue';
+  btnCarrito.style.fontSize = '1.3rem';
+  btnBorrar.classList.remove('d-none');
+}
+
+function marcarProductoSinCantidad(nombre) {
+  const { inputCantidad, btnCarrito, btnBorrar } = obtenerElementosProducto(nombre);
+
+  if (!inputCantidad || !btnCarrito || !btnBorrar) {
+    return;
+  }
+
+  inputCantidad.classList.remove('is-valid');
+  inputCantidad.classList.add('is-invalid');
+  btnCarrito.style.color = '';
+  btnCarrito.style.fontSize = '1.3rem';
+  btnBorrar.classList.add('d-none');
+
+  setTimeout(() => {
+    inputCantidad.classList.remove('is-invalid');
+  }, 8000);
+}
+
+function manejarClickCarrito(nombre) {
+  const { inputCantidad } = obtenerElementosProducto(nombre);
+  const cantidad = inputCantidad ? inputCantidad.value : "";
+
+  if (!cantidad || Number(cantidad) < 1) {
+    borrarDelCarrito(nombre);
+    marcarProductoSinCantidad(nombre);
+  } else {
+    enviarAlCarrito({ nombre, cantidad });
+    marcarProductoAgregado(nombre, cantidad);
+  }
+
+  enviarAlModal();
+  mostrarLogo();
+}
+
+function manejarClickBorrar(nombre) {
+  const { inputCantidad, btnCarrito, btnBorrar } = obtenerElementosProducto(nombre);
+
+  if (inputCantidad) {
+    inputCantidad.value = "";
+    inputCantidad.classList.remove('is-valid', 'is-invalid');
+  }
+
+  if (btnCarrito) {
+    btnCarrito.style.color = '';
+    btnCarrito.style.fontSize = '1.3rem';
+  }
+
+  if (btnBorrar) {
+    btnBorrar.classList.add('d-none');
+  }
+
+  borrarDelCarrito(nombre);
+  enviarAlModal();
+  mostrarLogo();
 }
 
 function enviarAlCarrito(producto) {
-  try {
-    let elementoRepetido = carritoGlobal.find(element => element.nombre == producto.nombre);
-    let indice = carritoGlobal.indexOf(elementoRepetido);
-    if (elementoRepetido) {
-      carritoGlobal.splice(indice, 1, producto)
-      modificarPrespuesto()
-      actualizarCarrito(carritoGlobal)
-    } else {
-      carritoGlobal.push(producto)
-      modificarPrespuesto()
-      actualizarCarrito(carritoGlobal)
-    }
-  } catch (e) {
-    localStorage.removeItem('carrito')
-  }
-}
+  const indice = carritoGlobal.findIndex(element => element.nombre === producto.nombre);
 
-function actualizarCarrito(array) {
-  let carrito = JSON.stringify(array);
-  localStorage.setItem('carrito', carrito)
+  if (indice >= 0) {
+    carritoGlobal.splice(indice, 1, producto);
+  } else {
+    carritoGlobal.push(producto);
+  }
+
+  modificarPrespuesto();
+  guardarCarrito();
 }
 
 function borrarDelCarrito(nombre) {
-  let index = carritoGlobal.findIndex(element => element.nombre == nombre);
-  console.log(index)
-  carritoGlobal.splice(index, 1)
-  modificarPrespuesto()
-  actualizarCarrito(carritoGlobal)
+  const index = carritoGlobal.findIndex(element => element.nombre === nombre);
+
+  if (index < 0) {
+    return;
+  }
+
+  carritoGlobal.splice(index, 1);
+  modificarPrespuesto();
+  guardarCarrito();
 }
 
 const vaciarContenedor = (contenedor) => {
   while (contenedor.firstChild) {
-    let hijo = contenedor.firstChild;
-    contenedor.removeChild(hijo)
+    contenedor.removeChild(contenedor.firstChild);
   }
 }
 
-async function enviarAlModal() {
+function enviarAlModal() {
   const contenedorModal = document.getElementById('contenedor-modal');
   vaciarContenedor(contenedorModal);
-  // contenedorModal.innerHTML = "";
 
-  carritoGlobal.forEach((element, index) => {
-    const productoModal = crearProductoModal(element, index);
-    contenedorModal.appendChild(productoModal)
-  });
-
-  const elementosI = await getElementosIModal();
-  agregarEventoEliminar(elementosI);
-  agregarEventoInput()
-}
-
-function agregarEventoEliminar(array) {
-  array.forEach((element) => {
-    element.addEventListener('click', (event) => {
-      let padre = element.parentNode
-      let nombre = padre.firstChild.dataset.nombre
-
-      borrarDelCarrito(nombre)
-      enviarAlModal()
-      quitarBtnEliminar(nombre)
-      mostrarLogo()
-    })
+  carritoGlobal.forEach((producto, index) => {
+    contenedorModal.appendChild(crearProductoModal(producto, index));
   });
 }
 
-function agregarEventoInput() {
-  const arrayInput = Array.from(document.getElementsByClassName('inputModal'));
-  arrayInput.forEach(element => {
-    element.addEventListener('input', () => {
-      let nombre = element.dataset.nombre
-      let cantidad = element.value
-      let producto = {
-        "nombre": nombre,
-        "cantidad": cantidad
-      }
-      enviarAlCarrito(producto)
-      const arrayInput = Array.from(document.getElementsByClassName('is-valid'))
-      let input = arrayInput.find(element => element.dataset.btnnombre == nombre)
-      if (input) {
-        input.value = cantidad;
-      }
-    })
-  });
+function manejarEliminarModal(nombre) {
+  borrarDelCarrito(nombre);
+  enviarAlModal();
+  quitarBtnEliminar(nombre);
+  mostrarLogo();
+}
+
+function manejarInputModal(nombre, cantidad) {
+  enviarAlCarrito({ nombre, cantidad });
+
+  const { inputCantidad } = obtenerElementosProducto(nombre);
+  if (inputCantidad && inputCantidad.classList.contains('is-valid')) {
+    inputCantidad.value = cantidad;
+  }
 }
 
 function quitarBtnEliminar(nombre) {
-  const array = Array.from(document.getElementsByClassName('borrar'));
-  const arrayCarrito = Array.from(document.getElementsByClassName('carrito-vacio'));
-  const arrayInput = Array.from(document.getElementsByClassName('is-valid'))
-  let btnBorrar = array.find(element => element.dataset.btnnombre == nombre)
-  let btnComprar = arrayCarrito.find(element => element.dataset.btnnombre == nombre)
-  let input = arrayInput.find(element => element.dataset.btnnombre == nombre)
+  const { inputCantidad, btnCarrito, btnBorrar } = obtenerElementosProducto(nombre);
 
   if (btnBorrar) {
-    btnBorrar.classList.add('d-none')
+    btnBorrar.classList.add('d-none');
   }
 
-  if (btnComprar) {
-    btnComprar.style = "font-size: 1.3rem"
+  if (btnCarrito) {
+    btnCarrito.style.color = '';
+    btnCarrito.style.fontSize = '1.3rem';
   }
 
-  if (input) {
-    input.value = "";
-    input.classList.remove('is-valid');
+  if (inputCantidad) {
+    inputCantidad.value = "";
+    inputCantidad.classList.remove('is-valid', 'is-invalid');
   }
-}
-
-function getElementosIModal() {
-  return new Promise((resolve) => {
-    let interval = setInterval(() => {
-      const arrayI = Array.from(document.getElementsByClassName('producto-modal-btnEliminar'));
-      if (arrayI.length == carritoGlobal.length) {
-        clearInterval(interval)
-        resolve(arrayI)
-      }
-    }, 200);
-  })
 }
 
 function crearProductoModal(producto, index) {
   const div = document.createElement('div');
-  div.className = "row my-2 producto-modal fs-6"
+  div.className = "row my-2 producto-modal fs-6";
 
-  div.innerHTML =
-    `<div class="col-6 d-flex align-items-center" data-nombre="${producto.nombre}">${producto.nombre}</div>
-     <div class="col-4 d-flex align-items-center"><input data-nombre="${producto.nombre}" min="1" class="form-control inputModal" type="number" value="${producto.cantidad}"></div>
-     <div class="col-2 d-flex justify-content-center producto-modal-btnEliminar"><i id="${index}" class="bi bi-x fs-2 producto-modal-eliminar"></i></div>
-  `
+  const nombre = document.createElement('div');
+  nombre.className = 'col-6 d-flex align-items-center';
+  nombre.dataset.nombre = producto.nombre;
+  nombre.textContent = producto.nombre;
 
+  const cantidadWrapper = document.createElement('div');
+  cantidadWrapper.className = 'col-4 d-flex align-items-center';
+  const cantidad = document.createElement('input');
+  cantidad.dataset.nombre = producto.nombre;
+  cantidad.min = '1';
+  cantidad.className = 'form-control inputModal';
+  cantidad.type = 'number';
+  cantidad.value = producto.cantidad;
+  cantidadWrapper.appendChild(cantidad);
 
+  const eliminar = document.createElement('div');
+  eliminar.className = 'col-2 d-flex justify-content-center producto-modal-btnEliminar';
+  eliminar.dataset.nombre = producto.nombre;
+  eliminar.innerHTML = `<i id="${index}" class="bi bi-x fs-2 producto-modal-eliminar"></i>`;
+
+  div.append(nombre, cantidadWrapper, eliminar);
   return div;
 }
 
-
 function modificarPrespuesto() {
-  let mensaje = carritoGlobal.map(objeto => `${objeto.cantidad} ${objeto.nombre} `).join('; ');
-  let mensajeCodificado = encodeURIComponent(mensaje);
-  let link = document.getElementById('link')
-  linkGlobal = `https://wa.me/59898716205?text=${mensajeCodificado}`
-  link.href = linkGlobal
+  const mensaje = carritoGlobal.map(objeto => `${objeto.cantidad} ${objeto.nombre}`).join('; ');
+  const mensajeCodificado = encodeURIComponent(mensaje);
+  const link = document.getElementById('link');
+  linkGlobal = `https://wa.me/${WHATSAPP_NUMERO}?text=${mensajeCodificado}`;
+  link.href = linkGlobal;
 }
 
-function mostrarCarritoDelLocal() {
-  carrito = JSON.parse(localStorage.getItem('carrito'));
-  console.log(carrito);
-}
-
-
-function cambiarTitulo(array) {
-  let titulo = document.getElementById('titulo');
-  titulo.textContent = array.titulo.toUpperCase();
+function cambiarTitulo(data) {
+  const titulo = document.getElementById('titulo');
+  titulo.textContent = data.titulo.toUpperCase();
 }
 
 function buscar() {
-  let buscador = document.getElementById('buscador');
-  let productos = Array.from(document.getElementsByClassName('fila-producto'));
-  productos.forEach(element => {
-    if (!(element.outerHTML.toLowerCase().includes(buscador.value.toLowerCase()))) {
-      element.style.display = "none";
-    }
-    else {
-      element.style.display = "table-row"
-    }
+  const buscador = document.getElementById('buscador');
+  const texto = buscador.value.toLowerCase();
+
+  $$('.fila-producto').forEach(fila => {
+    const coincide = fila.textContent.toLowerCase().includes(texto);
+    fila.style.display = coincide ? "table-row" : "none";
   });
 }
 
+function aplicarFiltroTipo() {
+  const selectorFiltro = document.getElementById('selector-filtro');
+  const filtro = selectorFiltro.value.toLowerCase();
+  const productos = Array.from(arrayProductos.objeto);
+  const productosFiltrados = productos.filter(producto => producto.tipo && producto.tipo.toLowerCase() === filtro);
+  mostrarArticulos(productosFiltrados);
+}
 
 document.addEventListener('DOMContentLoaded', () => {
-  modificarPrespuesto()
-  añadirEventoBtnModal()
-  fetchData(jsonNombre());    // Se usa aqui fetchData para actualizar arrayDatos, ya que el fetch de fetchData dentro de traerInfo no llega a completarse correctamente(dentro de otras funciones en general)
+  modificarPrespuesto();
+  añadirEventoBtnModal();
   traerInfo(jsonNombre());
-  enviarAlModal()
-  let buscador = document.getElementById('buscador');
-  let selector = document.getElementById('selector');
+  enviarAlModal();
 
-  buscador.addEventListener('keyup', () => {
-    buscar();
-  })
+  document.getElementById('buscador').addEventListener('keyup', buscar);
 
-  selector.addEventListener('change', (event) => {
-    localStorage.setItem('catNombre', event.target.value)
+  document.getElementById('selector').addEventListener('change', (event) => {
+    localStorage.setItem('catNombre', event.target.value);
     localStorage.removeItem('tipoNombre');
     traerInfo(jsonNombre());
-  })
+  });
 
-  selectorFiltro = document.getElementById('selector-filtro');
-  selectorFiltro.addEventListener('change', (event) => {
+  document.getElementById('selector-filtro').addEventListener('change', aplicarFiltroTipo);
 
-    let arrayChange = Array.from(arrayProductos.objeto)
-    let filtro = selectorFiltro.value.toLowerCase();
-    let arrayFiltro = arrayChange.filter(element => element.tipo.toLowerCase() === filtro);
+  document.getElementById('btn-quitar-filtro').addEventListener('click', limpiarFIltros);
 
-    mostrarArticulos(arrayFiltro)
-  })
+  cuerpoTabla.addEventListener('click', (event) => {
+    const btnCarrito = event.target.closest('.carrito-vacio');
+    const btnBorrar = event.target.closest('.borrar');
 
-  let btnQuitarFiltro = document.getElementById('btn-quitar-filtro');
-  btnQuitarFiltro.addEventListener('click', () => {
-    limpiarFIltros();
-  })
+    if (btnCarrito) {
+      manejarClickCarrito(btnCarrito.dataset.nombre);
+    }
 
-})
+    if (btnBorrar) {
+      manejarClickBorrar(btnBorrar.dataset.nombre);
+    }
+  });
+
+  document.getElementById('contenedor-modal').addEventListener('click', (event) => {
+    const btnEliminar = event.target.closest('.producto-modal-btnEliminar');
+
+    if (btnEliminar) {
+      manejarEliminarModal(btnEliminar.dataset.nombre);
+    }
+  });
+
+  document.getElementById('contenedor-modal').addEventListener('input', (event) => {
+    if (event.target.classList.contains('inputModal')) {
+      manejarInputModal(event.target.dataset.nombre, event.target.value);
+    }
+  });
+});

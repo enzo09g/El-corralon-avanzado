@@ -6,6 +6,10 @@ function trasladarse(event){
 
 
     localStorage.setItem('catNombre', dataNombre)
-    localStorage.setItem('tipoNombre', dataValue);
+    if (dataValue) {
+        localStorage.setItem('tipoNombre', dataValue);
+    } else {
+        localStorage.removeItem('tipoNombre');
+    }
     window.location = "productos-info";
   }

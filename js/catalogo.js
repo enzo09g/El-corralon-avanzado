@@ -1,20 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
-    añadirEventos();
+    agregarEventosCatalogo();
 })
 
-const añadirEventos = () => {
-    const array = document.querySelectorAll('.card.mb-4.shadow-sm.custom-card.cursor-active.h-100')
-    array.forEach(element => {
-        element.addEventListener('click', () => {
-            guardarLocalStorageEspecificacion(element)
+const agregarEventosCatalogo = () => {
+    const tarjetas = document.querySelectorAll('.custom-card[data-especificacion]');
+
+    tarjetas.forEach(tarjeta => {
+        tarjeta.addEventListener('click', () => {
+            guardarLocalStorageEspecificacion(tarjeta);
             window.location = "Especificaciones"
         })
     });
 }
 
 
-const guardarLocalStorageEspecificacion = (elemento) => {
-    console.log(elemento.dataset.especificacion)
-    let especificacion = JSON.stringify(elemento.dataset.especificacion)
-    localStorage.setItem('especificacion', especificacion)
+const guardarLocalStorageEspecificacion = (tarjeta) => {
+    const especificacion = tarjeta.dataset.especificacion;
+
+    if (!especificacion) {
+        return;
+    }
+
+    localStorage.setItem('especificacion', JSON.stringify(especificacion))
 }
