@@ -5,18 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  loadGoogleReviews()
+  fetchReviews("json/opiniones-google.json")
     .then((data) => renderGoogleReviews(list, data))
     .catch(() => renderReviewsUnavailable(list));
 });
-
-async function loadGoogleReviews() {
-  try {
-    return await fetchReviews("/api/google-reviews");
-  } catch (error) {
-    return fetchReviews("json/opiniones-google.json");
-  }
-}
 
 async function fetchReviews(url) {
   const response = await fetch(url, { cache: "no-store" });
