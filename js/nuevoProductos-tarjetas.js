@@ -11,5 +11,5 @@ function trasladarse(event){
     } else {
         localStorage.removeItem('tipoNombre');
     }
-    window.location = "productos-info";
+    window.location = "/productos-info";
   }

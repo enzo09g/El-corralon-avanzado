@@ -31,6 +31,11 @@ function jsonNombre() {
 
 async function traerInfo(json) {
   try {
+    cuerpoTabla.innerHTML = `
+      <tr>
+        <td class="loading-state" colspan="3">Cargando productos...</td>
+      </tr>
+    `;
     const response = await fetch(json);
 
     if (!response.ok) {
@@ -48,7 +53,7 @@ async function traerInfo(json) {
     console.error(error);
     cuerpoTabla.innerHTML = `
       <tr>
-        <td colspan="3">No se pudieron cargar los productos.</td>
+        <td class="empty-state" colspan="3">No se pudieron cargar los productos. Volvé a intentar o elegí otra categoría.</td>
       </tr>
     `;
   }
@@ -191,6 +196,16 @@ function crearFilaProducto(producto, index) {
 function mostrarArticulos(productos) {
   mostrarLogo();
   cuerpoTabla.innerHTML = '';
+
+  if (!productos || productos.length === 0) {
+    cuerpoTabla.innerHTML = `
+      <tr>
+        <td class="empty-state" colspan="3">No hay productos para mostrar con este filtro.</td>
+      </tr>
+    `;
+    return;
+  }
+
   const fragment = document.createDocumentFragment();
 
   productos.forEach((producto, index) => {
@@ -397,11 +412,28 @@ function cambiarTitulo(data) {
 function buscar() {
   const buscador = document.getElementById('buscador');
   const texto = buscador.value.toLowerCase();
+  let visibles = 0;
 
   $$('.fila-producto').forEach(fila => {
     const coincide = fila.textContent.toLowerCase().includes(texto);
     fila.style.display = coincide ? "table-row" : "none";
+    if (coincide) {
+      visibles++;
+    }
   });
+
+  const emptyRow = document.getElementById('busqueda-vacia');
+
+  if (visibles === 0 && texto) {
+    if (!emptyRow) {
+      const fila = document.createElement('tr');
+      fila.id = 'busqueda-vacia';
+      fila.innerHTML = `<td class="empty-state" colspan="3">No encontramos productos con esa búsqueda.</td>`;
+      cuerpoTabla.appendChild(fila);
+    }
+  } else if (emptyRow) {
+    emptyRow.remove();
+  }
 }
 
 function aplicarFiltroTipo() {
