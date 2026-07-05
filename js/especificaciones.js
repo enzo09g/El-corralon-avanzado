@@ -853,7 +853,7 @@ function cargarPagina() {
                     <div class="spec-note">
                         <h3>No hay especificación seleccionada</h3>
                         <p>Esta página carga la ficha técnica desde el artículo seleccionado en el catálogo.</p>
-                        <a class="btn btn-danger" href="Catalogo">Ir al catálogo</a>
+                        <a class="btn btn-danger" href="/catalogo">Ir al catálogo</a>
                     </div>
                 </section>
             `

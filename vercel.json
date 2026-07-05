@@ -1,24 +1,120 @@
 {
-    "rewrites": [
+    "redirects": [
         {
-            "source": "/especificaciones",
-            "destination": "/especificaciones.html"
+            "source": "/Inicio",
+            "destination": "/",
+            "permanent": true
         },
         {
-            "source": "/Especificaciones",
-            "destination": "/especificaciones.html"
+            "source": "/inicio",
+            "destination": "/",
+            "permanent": true
         },
         {
-            "source": "/Catálogo",
-            "destination": "/catalogo.html"
+            "source": "/index",
+            "destination": "/",
+            "permanent": true
         },
         {
-            "source": "/catálogo",
-            "destination": "/catalogo.html"
+            "source": "/index.html",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/index2",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/index2.html",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/index3",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/index3.html",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/calcular",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/calcular.html",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/Productos",
+            "destination": "/productos",
+            "permanent": true
+        },
+        {
+            "source": "/nuevoProductos",
+            "destination": "/productos",
+            "permanent": true
+        },
+        {
+            "source": "/nuevoProductos.html",
+            "destination": "/productos",
+            "permanent": true
         },
         {
             "source": "/Catalogo",
-            "destination": "/catalogo.html"
+            "destination": "/catalogo",
+            "permanent": true
+        },
+        {
+            "source": "/catalogo.html",
+            "destination": "/catalogo",
+            "permanent": true
+        },
+        {
+            "source": "/Catálogo",
+            "destination": "/catalogo",
+            "permanent": true
+        },
+        {
+            "source": "/catálogo",
+            "destination": "/catalogo",
+            "permanent": true
+        },
+        {
+            "source": "/Contacto",
+            "destination": "/contacto",
+            "permanent": true
+        },
+        {
+            "source": "/contacto.html",
+            "destination": "/contacto",
+            "permanent": true
+        },
+        {
+            "source": "/Productos-info",
+            "destination": "/productos-info",
+            "permanent": true
+        },
+        {
+            "source": "/productos-info.html",
+            "destination": "/productos-info",
+            "permanent": true
+        },
+        {
+            "source": "/especificaciones.html",
+            "destination": "/especificaciones",
+            "permanent": true
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/productos",
+            "destination": "/nuevoProductos.html"
         },
         {
             "source": "/catalogo",
@@ -29,36 +125,16 @@
             "destination": "/contacto.html"
         },
         {
-            "source": "/Contacto",
-            "destination": "/contacto.html"
-        },
-        {
-            "source": "/productos",
-            "destination": "/nuevoProductos.html"
-        },
-        {
-            "source": "/Productos",
-            "destination": "/nuevoProductos.html"
-        },
-        {
             "source": "/productos-info",
             "destination": "/productos-info.html"
         },
         {
-            "source": "/Productos-info",
-            "destination": "/productos-info.html"
+            "source": "/especificaciones",
+            "destination": "/especificaciones.html"
         },
         {
-            "source": "/inicio",
-            "destination": "/index.html"
-        },
-        {
-            "source": "/Inicio",
-            "destination": "/index.html"
-        },
-        {
-            "source": "/index",
-            "destination": "/index.html"
+            "source": "/Especificaciones",
+            "destination": "/especificaciones.html"
         }
     ]
 }
